@@ -1,0 +1,55 @@
+name: Stock Chart Bot
+
+on:
+  schedule:
+    # UTC times → TR: +3 saat
+    - cron: "0 6  * * *"   # TR 09:00
+    - cron: "0 9  * * *"   # TR 12:00
+    - cron: "0 12 * * *"   # TR 15:00
+    - cron: "0 15 * * *"   # TR 18:00
+    - cron: "0 18 * * *"   # TR 21:00
+  workflow_dispatch:        # Manuel tetikleme
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install system deps (ffmpeg + fonts)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-dejavu-core
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Patch font path for Linux
+        run: |
+          # Patch all Python files: Windows font paths → Linux Liberation fonts
+          for f in stock_chart.py bar_chart_race.py dividend_video.py tts_helper.py stock_bot.py; do
+            sed -i 's|C:/Windows/Fonts/|/usr/share/fonts/truetype/liberation/|g' "$f" || true
+            sed -i 's|"arialbd.ttf"|"LiberationSans-Bold.ttf"|g'    "$f" || true
+            sed -i 's|"arial.ttf"|"LiberationSans-Regular.ttf"|g'   "$f" || true
+          done
+
+      - name: Run stock bot
+        env:
+          TOKEN_JSON: ${{ secrets.TOKEN_JSON }}
+        run: python stock_bot.py
+
+      - name: Commit used-stocks tracker
+        run: |
+          git config user.name  "Stock Bot"
+          git config user.email "bot@github.com"
+          git add kullanilan_hisseler.json || true
+          git diff --staged --quiet || git commit -m "chore: update used stocks [skip ci]"
+          git push || true

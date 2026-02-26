@@ -1,0 +1,8 @@
+*.mp4
+*.mp3
+__pycache__/
+*.pyc
+*.pyo
+kullanilan_hisseler.json
+*.json
+!requirements.txt
