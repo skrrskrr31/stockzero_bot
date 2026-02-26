@@ -94,9 +94,8 @@ DIVIDEND_PAIRS = [
     ("HYG",   "LQD",   "Bond Income ETF"),
 ]
 
-# Video type rotation: 0=single, 1=race, 2=dividend, 0=single, 1=race ...
-# Pattern repeats every 6: single, single, race, single, single, dividend
-VIDEO_SCHEDULE = [0, 0, 1, 0, 0, 2]   # indices: 0=single, 1=race, 2=dividend
+# Video type rotation — repeats every 3: single, race, dividend
+VIDEO_SCHEDULE = [0, 1, 2]   # indices: 0=single, 1=race, 2=dividend
 
 SECTORS_ORDER = ["tech", "realestate", "healthcare", "finance", "energy", "consumer"]
 
