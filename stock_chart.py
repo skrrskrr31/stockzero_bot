@@ -5,7 +5,7 @@ Style: Dark background, wavy grid, green animated line, white dot, progress bar
 
 import math
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import cv2
 import numpy as np
@@ -45,7 +45,8 @@ def _font(name: str, size: int) -> ImageFont.FreeTypeFont:
 
 # ── Stock data ────────────────────────────────────────────────────────────────
 def fetch_prices(ticker: str, years: int = 10):
-    end   = datetime.now()
+    # Use tomorrow as end so today's completed session is always included
+    end   = datetime.now() + timedelta(days=1)
     start = end.replace(year=end.year - years)
     df = yf.download(
         ticker,
@@ -55,6 +56,8 @@ def fetch_prices(ticker: str, years: int = 10):
         auto_adjust=True,
     )
     prices = df["Close"].squeeze().dropna()
+    # Remove any weekend dates (safeguard against yfinance edge cases)
+    prices = prices[prices.index.dayofweek < 5]
     if len(prices) < 100:
         raise ValueError(f"Not enough data for {ticker} ({len(prices)} rows)")
     return prices
@@ -179,31 +182,42 @@ def _render_frame(
     iw = draw.textlength(inv_str, font=f_gray)
     draw.text(((WIDTH - iw) / 2, 272), inv_str, fill=GRAY, font=f_gray)
 
-    # ── Date label at bottom ──────────────────────────────────────
-    di = min(n_pts - 1, len(dates) - 1)
-    date_str = dates[di].strftime("%m/%d/%Y")
-    dw = draw.textlength(date_str, font=f_date)
-    draw.text(((WIDTH - dw) / 2, CHART_B + 30), date_str, fill=GRAY, font=f_date)
+    # ── Date label at bottom (hidden during summary to avoid overlap) ──
+    if not show_summary:
+        di = min(n_pts - 1, len(dates) - 1)
+        date_str = dates[di].strftime("%m/%d/%Y")
+        dw = draw.textlength(date_str, font=f_date)
+        draw.text(((WIDTH - dw) / 2, CHART_B + 30), date_str, fill=GRAY, font=f_date)
 
     # ── Summary overlay (hold phase) ──────────────────────────────
     if show_summary:
-        f_big   = _font("arialbd.ttf", 80)
-        f_arrow = _font("arialbd.ttf", 70)
-        f_res   = _font("arialbd.ttf", 110)
+        f_val   = _font("arialbd.ttf", 62)
+        f_gain  = _font("arialbd.ttf", 48)
         end_val = values[-1]
         gain    = (end_val - values[0]) / values[0] * 100
 
-        summary_y = CHART_B + 110
-        line1 = f"${investment:,.0f}  →"
-        line2 = f"${end_val:,.0f}"
-        line3 = f"+{gain:.0f}% in {years} yrs"
+        summary_y = CHART_B + 22
 
-        l1w = draw.textlength(line1, font=f_big)
-        draw.text(((WIDTH - l1w) / 2, summary_y),      line1, fill=GRAY,  font=f_big)
-        l2w = draw.textlength(line2, font=f_res)
-        draw.text(((WIDTH - l2w) / 2, summary_y + 95), line2, fill=GREEN, font=f_res)
-        l3w = draw.textlength(line3, font=f_arrow)
-        draw.text(((WIDTH - l3w) / 2, summary_y + 220),line3, fill=WHITE, font=f_arrow)
+        # Left: $10,000      Right: $319,320
+        inv_str = f"${investment:,.0f}"
+        end_str = f"${end_val:,.0f}"
+        end_w   = draw.textlength(end_str, font=f_val)
+
+        draw.text((CHART_L, summary_y),           inv_str, fill=GRAY,  font=f_val)
+        draw.text((CHART_R - end_w, summary_y),   end_str, fill=GREEN, font=f_val)
+
+        # Arrow line connecting them
+        inv_w  = draw.textlength(inv_str, font=f_val)
+        mid_y  = summary_y + 32
+        ax1    = CHART_L + inv_w + 12
+        ax2    = CHART_R - end_w - 12
+        if ax2 > ax1 + 20:
+            draw.line([(ax1, mid_y), (ax2, mid_y)], fill=GRAY, width=2)
+            draw.polygon([(ax2, mid_y-7), (ax2+12, mid_y), (ax2, mid_y+7)], fill=GRAY)
+
+        # Gain % below
+        gain_str = f"+{gain:.0f}%  in {years} yrs"
+        draw.text((CHART_L, summary_y + 78), gain_str, fill=WHITE, font=f_gain)
 
     # ── "Data as of" label ────────────────────────────────────────
     f_as_of  = _font("arial.ttf", 28)
