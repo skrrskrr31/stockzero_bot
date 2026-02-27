@@ -16,24 +16,46 @@ def generate_tts(text: str, out_mp3: str) -> str:
     return out_mp3
 
 
+MUSIC_FILE = "background.mp3"
+MUSIC_VOLUME = 0.25   # background music volume (0.0 - 1.0)
+
+
 def merge_audio_video(video_path: str, audio_path: str, out_path: str,
                       audio_delay_ms: int = 0) -> str:
     """
-    Merge silent video with audio.
-    Uses moviepy (works everywhere); falls back gracefully on error.
-    audio_delay_ms: delay before audio starts (milliseconds).
+    Merge silent video with TTS narration + background music.
+    - TTS plays at full volume for the first few seconds
+    - Background music loops under the entire video at MUSIC_VOLUME
+    Falls back gracefully on error.
     """
     try:
         from moviepy.editor import VideoFileClip, AudioFileClip, CompositeAudioClip
+
         video = VideoFileClip(video_path)
-        audio = AudioFileClip(audio_path)
+        dur   = video.duration
 
+        clips = []
+
+        # TTS narration
+        tts = AudioFileClip(audio_path)
         if audio_delay_ms > 0:
-            audio = audio.set_start(audio_delay_ms / 1000.0)
+            tts = tts.set_start(audio_delay_ms / 1000.0)
+        tts = tts.set_duration(min(tts.duration, dur))
+        clips.append(tts)
 
-        # Pad audio to video length by looping if needed, or just use as-is
-        audio = audio.set_duration(min(audio.duration, video.duration))
-        video = video.set_audio(audio)
+        # Background music — loop to fill entire video
+        if os.path.exists(MUSIC_FILE):
+            music = AudioFileClip(MUSIC_FILE)
+            # Loop if music is shorter than video
+            if music.duration < dur:
+                loops = int(dur / music.duration) + 1
+                from moviepy.audio.fx.audio_loop import audio_loop
+                music = audio_loop(music, nloops=loops)
+            music = music.set_duration(dur).volumex(MUSIC_VOLUME)
+            clips.append(music)
+
+        composite = CompositeAudioClip(clips)
+        video = video.set_audio(composite)
 
         video.write_videofile(
             out_path,
@@ -44,7 +66,6 @@ def merge_audio_video(video_path: str, audio_path: str, out_path: str,
             logger=None,
         )
         video.close()
-        audio.close()
         return out_path
 
     except Exception as e:
