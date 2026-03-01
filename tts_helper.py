@@ -88,10 +88,7 @@ def build_narration(ticker: str, company: str, investment: float, years: int) ->
 def build_race_narration(sector_label: str, investment: float, years: int) -> str:
     """Short intro narration for the bar chart race — no spoilers."""
     inv_str = f"{int(investment):,}"
-    return (
-        f"{inv_str} dollars invested in every {sector_label} stock "
-        f"{years} years ago. Which one won?"
-    )
+    return f"{inv_str} dollars invested. How did it change in {years} years?"
 
 
 def _format_value_spoken(v: float) -> str:
