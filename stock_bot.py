@@ -286,10 +286,7 @@ def main():
         raw_path = result["video_path"]
 
         # Short TTS — no spoilers
-        narration = (
-            f"Ten thousand dollars in {t1} versus {t2}. "
-            f"Same start date. Which one pays more?"
-        )
+        narration = f"10k USD. {t1} versus {t2}."
         mp3 = "div_speech.mp3"
         try:
             generate_tts(narration, mp3)
