@@ -4,6 +4,6 @@
 __pycache__/
 *.pyc
 *.pyo
-kullanilan_hisseler.json
 *.json
 !requirements.txt
+!kullanilan_hisseler.json
