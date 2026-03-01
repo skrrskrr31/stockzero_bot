@@ -36,7 +36,7 @@ SINGLE_STOCKS = [
     # Internet
     "NFLX", "SHOP", "UBER", "SPOT", "RBLX",
     # Finance / payments
-    "V", "MA", "JPM", "GS", "COIN", "SQ",
+    "V", "MA", "JPM", "GS", "COIN", "PYPL",
     # ETFs
     "QQQ", "SPY", "VTI",
     # Growth
@@ -54,7 +54,7 @@ COMPANY_NAMES = {
     "MU":   "Micron",   "SHOP": "Shopify",    "UBER": "Uber",
     "SPOT": "Spotify",  "RBLX": "Roblox",     "V":    "Visa",
     "MA":   "Mastercard","JPM": "JPMorgan",   "GS":   "Goldman Sachs",
-    "COIN": "Coinbase", "SQ":   "Block",       "QQQ":  "the Nasdaq ETF",
+    "COIN": "Coinbase", "PYPL": "PayPal",       "QQQ":  "the Nasdaq ETF",
     "SPY":  "the S&P 500 ETF",                 "VTI":  "Vanguard Total Market ETF",
     "PLTR": "Palantir", "CRWD": "CrowdStrike","DDOG": "Datadog",
     "SNOW": "Snowflake","XOM":  "Exxon Mobil","NEE":  "NextEra Energy",
@@ -329,12 +329,22 @@ def main():
 
     else:
         # ── Single stock ──────────────────────────────────────────
-        ticker  = _pick_stock(used.get("single", []))
-        company = COMPANY_NAMES.get(ticker, ticker)
-        print(f"Ticker: {ticker} ({company})")
-
-        result   = create_single_video(ticker, investment=INVESTMENT, years=YEARS)
-        raw_path = result["video_path"]
+        tried = []
+        result = raw_path = None
+        for _attempt in range(5):
+            ticker  = _pick_stock(used.get("single", []) + tried)
+            company = COMPANY_NAMES.get(ticker, ticker)
+            print(f"Ticker: {ticker} ({company})")
+            try:
+                result   = create_single_video(ticker, investment=INVESTMENT, years=YEARS)
+                raw_path = result["video_path"]
+                break
+            except Exception as e:
+                print(f"  Skipping {ticker}: {e}")
+                tried.append(ticker)
+        if result is None:
+            print("ERROR: No valid ticker found after 5 attempts.")
+            sys.exit(1)
 
         # Short TTS — no final value spoiler
         narration = build_narration(ticker, company, INVESTMENT, YEARS)
