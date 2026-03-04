@@ -3,6 +3,8 @@
     "MU"
   ],
   "race_count": 1,
-  "dividend_pairs": [],
-  "total": 2
+  "dividend_pairs": [
+    "DGRO_VIG"
+  ],
+  "total": 3
 }
