@@ -1,6 +1,8 @@
 {
-  "single": [],
+  "single": [
+    "MU"
+  ],
   "race_count": 0,
   "dividend_pairs": [],
-  "total": 0
+  "total": 1
 }
