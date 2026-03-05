@@ -2,7 +2,8 @@
   "single": [
     "MU",
     "PLTR",
-    "XOM"
+    "XOM",
+    "AAPL"
   ],
   "race_count": 3,
   "dividend_pairs": [
@@ -10,5 +11,5 @@
     "O_STAG",
     "SPHD_SPYD"
   ],
-  "total": 9
+  "total": 10
 }
