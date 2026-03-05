@@ -1,12 +1,13 @@
 {
   "single": [
     "MU",
-    "PLTR"
+    "PLTR",
+    "XOM"
   ],
   "race_count": 2,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG"
   ],
-  "total": 6
+  "total": 7
 }
