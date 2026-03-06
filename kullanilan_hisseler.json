@@ -5,11 +5,11 @@
     "XOM",
     "AAPL"
   ],
-  "race_count": 3,
+  "race_count": 4,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
     "SPHD_SPYD"
   ],
-  "total": 10
+  "total": 11
 }
