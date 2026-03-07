@@ -3,7 +3,8 @@
     "MU",
     "PLTR",
     "XOM",
-    "AAPL"
+    "AAPL",
+    "SPOT"
   ],
   "race_count": 4,
   "dividend_pairs": [
@@ -12,5 +13,5 @@
     "SPHD_SPYD",
     "VYMI_IDV"
   ],
-  "total": 12
+  "total": 13
 }
