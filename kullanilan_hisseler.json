@@ -4,7 +4,8 @@
     "PLTR",
     "XOM",
     "AAPL",
-    "SPOT"
+    "SPOT",
+    "NFLX"
   ],
   "race_count": 5,
   "dividend_pairs": [
@@ -14,5 +15,5 @@
     "VYMI_IDV",
     "DVY_HDV"
   ],
-  "total": 15
+  "total": 16
 }
