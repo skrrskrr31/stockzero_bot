@@ -6,12 +6,12 @@
     "AAPL",
     "SPOT"
   ],
-  "race_count": 4,
+  "race_count": 5,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
     "SPHD_SPYD",
     "VYMI_IDV"
   ],
-  "total": 13
+  "total": 14
 }
