@@ -5,7 +5,8 @@
     "XOM",
     "AAPL",
     "SPOT",
-    "NFLX"
+    "NFLX",
+    "INTC"
   ],
   "race_count": 6,
   "dividend_pairs": [
@@ -16,5 +17,5 @@
     "DVY_HDV",
     "JEPQ_JEPI"
   ],
-  "total": 18
+  "total": 19
 }
