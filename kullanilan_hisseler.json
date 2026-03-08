@@ -8,7 +8,7 @@
     "NFLX",
     "INTC"
   ],
-  "race_count": 6,
+  "race_count": 7,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -17,5 +17,5 @@
     "DVY_HDV",
     "JEPQ_JEPI"
   ],
-  "total": 19
+  "total": 20
 }
