@@ -7,7 +7,7 @@
     "SPOT",
     "NFLX"
   ],
-  "race_count": 5,
+  "race_count": 6,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -15,5 +15,5 @@
     "VYMI_IDV",
     "DVY_HDV"
   ],
-  "total": 16
+  "total": 17
 }
