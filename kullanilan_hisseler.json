@@ -7,7 +7,8 @@
     "SPOT",
     "NFLX",
     "INTC",
-    "SNOW"
+    "SNOW",
+    "META"
   ],
   "race_count": 8,
   "dividend_pairs": [
@@ -20,5 +21,5 @@
     "JEPI_XYLD",
     "SCHD_VYM"
   ],
-  "total": 24
+  "total": 25
 }
