@@ -9,7 +9,7 @@
     "INTC",
     "SNOW"
   ],
-  "race_count": 7,
+  "race_count": 8,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -19,5 +19,5 @@
     "JEPQ_JEPI",
     "JEPI_XYLD"
   ],
-  "total": 22
+  "total": 23
 }
