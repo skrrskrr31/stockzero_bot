@@ -6,7 +6,8 @@
     "AAPL",
     "SPOT",
     "NFLX",
-    "INTC"
+    "INTC",
+    "SNOW"
   ],
   "race_count": 7,
   "dividend_pairs": [
@@ -18,5 +19,5 @@
     "JEPQ_JEPI",
     "JEPI_XYLD"
   ],
-  "total": 21
+  "total": 22
 }
