@@ -9,7 +9,8 @@
     "INTC",
     "SNOW",
     "META",
-    "SHOP"
+    "SHOP",
+    "UBER"
   ],
   "race_count": 10,
   "dividend_pairs": [
@@ -24,5 +25,5 @@
     "JEPQ_QYLD",
     "RYLD_DIVO"
   ],
-  "total": 30
+  "total": 31
 }
