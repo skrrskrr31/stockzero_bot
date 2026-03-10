@@ -8,7 +8,8 @@
     "NFLX",
     "INTC",
     "SNOW",
-    "META"
+    "META",
+    "SHOP"
   ],
   "race_count": 9,
   "dividend_pairs": [
@@ -22,5 +23,5 @@
     "SCHD_VYM",
     "JEPQ_QYLD"
   ],
-  "total": 27
+  "total": 28
 }
