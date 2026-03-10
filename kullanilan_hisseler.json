@@ -19,7 +19,8 @@
     "DVY_HDV",
     "JEPQ_JEPI",
     "JEPI_XYLD",
-    "SCHD_VYM"
+    "SCHD_VYM",
+    "JEPQ_QYLD"
   ],
-  "total": 26
+  "total": 27
 }
