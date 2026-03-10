@@ -11,7 +11,7 @@
     "META",
     "SHOP"
   ],
-  "race_count": 9,
+  "race_count": 10,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -23,5 +23,5 @@
     "SCHD_VYM",
     "JEPQ_QYLD"
   ],
-  "total": 28
+  "total": 29
 }
