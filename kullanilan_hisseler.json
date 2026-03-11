@@ -23,7 +23,8 @@
     "JEPI_XYLD",
     "SCHD_VYM",
     "JEPQ_QYLD",
-    "RYLD_DIVO"
+    "RYLD_DIVO",
+    "PFF_PFFD"
   ],
-  "total": 32
+  "total": 33
 }
