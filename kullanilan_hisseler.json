@@ -13,7 +13,7 @@
     "UBER",
     "QQQ"
   ],
-  "race_count": 11,
+  "race_count": 12,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -27,5 +27,5 @@
     "RYLD_DIVO",
     "PFF_PFFD"
   ],
-  "total": 34
+  "total": 35
 }
