@@ -12,7 +12,7 @@
     "SHOP",
     "UBER"
   ],
-  "race_count": 10,
+  "race_count": 11,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -25,5 +25,5 @@
     "JEPQ_QYLD",
     "RYLD_DIVO"
   ],
-  "total": 31
+  "total": 32
 }
