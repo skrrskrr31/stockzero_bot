@@ -10,7 +10,8 @@
     "SNOW",
     "META",
     "SHOP",
-    "UBER"
+    "UBER",
+    "QQQ"
   ],
   "race_count": 11,
   "dividend_pairs": [
@@ -26,5 +27,5 @@
     "RYLD_DIVO",
     "PFF_PFFD"
   ],
-  "total": 33
+  "total": 34
 }
