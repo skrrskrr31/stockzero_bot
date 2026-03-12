@@ -11,7 +11,8 @@
     "META",
     "SHOP",
     "UBER",
-    "QQQ"
+    "QQQ",
+    "ABBV"
   ],
   "race_count": 12,
   "dividend_pairs": [
@@ -28,5 +29,5 @@
     "PFF_PFFD",
     "VNQ_IYR"
   ],
-  "total": 36
+  "total": 37
 }
