@@ -15,7 +15,7 @@
     "ABBV",
     "GOOGL"
   ],
-  "race_count": 13,
+  "race_count": 14,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -31,5 +31,5 @@
     "VNQ_IYR",
     "SPHD_SPYD"
   ],
-  "total": 40
+  "total": 41
 }
