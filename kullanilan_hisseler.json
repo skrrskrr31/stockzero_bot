@@ -14,7 +14,7 @@
     "QQQ",
     "ABBV"
   ],
-  "race_count": 12,
+  "race_count": 13,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -29,5 +29,5 @@
     "PFF_PFFD",
     "VNQ_IYR"
   ],
-  "total": 37
+  "total": 38
 }
