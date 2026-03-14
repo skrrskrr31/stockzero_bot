@@ -15,7 +15,8 @@
     "ABBV",
     "GOOGL",
     "NEE",
-    "LLY"
+    "LLY",
+    "GS"
   ],
   "race_count": 16,
   "dividend_pairs": [
@@ -36,5 +37,5 @@
     "DVY_HDV",
     "HYG_LQD"
   ],
-  "total": 48
+  "total": 49
 }
