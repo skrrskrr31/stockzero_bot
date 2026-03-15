@@ -19,7 +19,7 @@
     "GS",
     "MSFT"
   ],
-  "race_count": 17,
+  "race_count": 18,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -39,5 +39,5 @@
     "HYG_LQD",
     "JEPI_XYLD"
   ],
-  "total": 52
+  "total": 53
 }
