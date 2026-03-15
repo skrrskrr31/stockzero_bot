@@ -16,7 +16,8 @@
     "GOOGL",
     "NEE",
     "LLY",
-    "GS"
+    "GS",
+    "MSFT"
   ],
   "race_count": 17,
   "dividend_pairs": [
@@ -38,5 +39,5 @@
     "HYG_LQD",
     "JEPI_XYLD"
   ],
-  "total": 51
+  "total": 52
 }
