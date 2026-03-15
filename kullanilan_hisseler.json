@@ -17,7 +17,8 @@
     "NEE",
     "LLY",
     "GS",
-    "MSFT"
+    "MSFT",
+    "V"
   ],
   "race_count": 18,
   "dividend_pairs": [
@@ -40,5 +41,5 @@
     "JEPI_XYLD",
     "O_STAG"
   ],
-  "total": 54
+  "total": 55
 }
