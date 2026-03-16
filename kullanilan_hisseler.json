@@ -19,7 +19,8 @@
     "GS",
     "MSFT",
     "V",
-    "CRWD"
+    "CRWD",
+    "AMZN"
   ],
   "race_count": 20,
   "dividend_pairs": [
@@ -44,5 +45,5 @@
     "VNQ_IYR",
     "SCHD_VYM"
   ],
-  "total": 60
+  "total": 61
 }
