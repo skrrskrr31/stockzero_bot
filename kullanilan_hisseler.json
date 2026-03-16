@@ -18,7 +18,8 @@
     "LLY",
     "GS",
     "MSFT",
-    "V"
+    "V",
+    "CRWD"
   ],
   "race_count": 19,
   "dividend_pairs": [
@@ -42,5 +43,5 @@
     "O_STAG",
     "VNQ_IYR"
   ],
-  "total": 57
+  "total": 58
 }
