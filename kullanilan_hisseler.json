@@ -22,7 +22,7 @@
     "CRWD",
     "AMZN"
   ],
-  "race_count": 20,
+  "race_count": 21,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -45,5 +45,5 @@
     "VNQ_IYR",
     "SCHD_VYM"
   ],
-  "total": 61
+  "total": 62
 }
