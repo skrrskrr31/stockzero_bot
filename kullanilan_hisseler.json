@@ -43,7 +43,8 @@
     "JEPI_XYLD",
     "O_STAG",
     "VNQ_IYR",
-    "SCHD_VYM"
+    "SCHD_VYM",
+    "JEPQ_JEPI"
   ],
-  "total": 62
+  "total": 63
 }
