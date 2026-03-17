@@ -20,7 +20,8 @@
     "MSFT",
     "V",
     "CRWD",
-    "AMZN"
+    "AMZN",
+    "SPY"
   ],
   "race_count": 21,
   "dividend_pairs": [
@@ -46,5 +47,5 @@
     "SCHD_VYM",
     "JEPQ_JEPI"
   ],
-  "total": 63
+  "total": 64
 }
