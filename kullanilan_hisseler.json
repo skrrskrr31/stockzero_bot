@@ -23,7 +23,7 @@
     "AMZN",
     "SPY"
   ],
-  "race_count": 21,
+  "race_count": 22,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -47,5 +47,5 @@
     "SCHD_VYM",
     "JEPQ_JEPI"
   ],
-  "total": 64
+  "total": 65
 }
