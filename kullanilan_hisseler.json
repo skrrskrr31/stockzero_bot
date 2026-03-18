@@ -25,7 +25,7 @@
     "VTI",
     "TSLA"
   ],
-  "race_count": 23,
+  "race_count": 24,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -51,5 +51,5 @@
     "DVY_HDV",
     "VYMI_IDV"
   ],
-  "total": 70
+  "total": 71
 }
