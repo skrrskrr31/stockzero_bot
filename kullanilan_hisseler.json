@@ -22,7 +22,8 @@
     "CRWD",
     "AMZN",
     "SPY",
-    "VTI"
+    "VTI",
+    "TSLA"
   ],
   "race_count": 23,
   "dividend_pairs": [
@@ -50,5 +51,5 @@
     "DVY_HDV",
     "VYMI_IDV"
   ],
-  "total": 69
+  "total": 70
 }
