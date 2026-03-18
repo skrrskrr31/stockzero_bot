@@ -21,7 +21,8 @@
     "V",
     "CRWD",
     "AMZN",
-    "SPY"
+    "SPY",
+    "VTI"
   ],
   "race_count": 22,
   "dividend_pairs": [
@@ -48,5 +49,5 @@
     "JEPQ_JEPI",
     "DVY_HDV"
   ],
-  "total": 66
+  "total": 67
 }
