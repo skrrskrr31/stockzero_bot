@@ -24,7 +24,8 @@
     "SPY",
     "VTI",
     "TSLA",
-    "COIN"
+    "COIN",
+    "DDOG"
   ],
   "race_count": 25,
   "dividend_pairs": [
@@ -54,5 +55,5 @@
     "HYG_LQD",
     "RYLD_DIVO"
   ],
-  "total": 75
+  "total": 76
 }
