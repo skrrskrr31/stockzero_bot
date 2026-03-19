@@ -26,7 +26,7 @@
     "TSLA",
     "COIN"
   ],
-  "race_count": 24,
+  "race_count": 25,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -53,5 +53,5 @@
     "VYMI_IDV",
     "HYG_LQD"
   ],
-  "total": 73
+  "total": 74
 }
