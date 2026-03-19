@@ -23,7 +23,8 @@
     "AMZN",
     "SPY",
     "VTI",
-    "TSLA"
+    "TSLA",
+    "COIN"
   ],
   "race_count": 24,
   "dividend_pairs": [
@@ -52,5 +53,5 @@
     "VYMI_IDV",
     "HYG_LQD"
   ],
-  "total": 72
+  "total": 73
 }
