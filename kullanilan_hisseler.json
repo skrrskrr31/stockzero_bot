@@ -28,7 +28,7 @@
     "DDOG",
     "PYPL"
   ],
-  "race_count": 26,
+  "race_count": 27,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -57,5 +57,5 @@
     "RYLD_DIVO",
     "DGRO_VIG"
   ],
-  "total": 79
+  "total": 80
 }
