@@ -25,7 +25,8 @@
     "VTI",
     "TSLA",
     "COIN",
-    "DDOG"
+    "DDOG",
+    "PYPL"
   ],
   "race_count": 26,
   "dividend_pairs": [
@@ -56,5 +57,5 @@
     "RYLD_DIVO",
     "DGRO_VIG"
   ],
-  "total": 78
+  "total": 79
 }
