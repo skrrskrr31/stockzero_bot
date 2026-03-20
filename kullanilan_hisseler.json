@@ -27,7 +27,7 @@
     "COIN",
     "DDOG"
   ],
-  "race_count": 25,
+  "race_count": 26,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -55,5 +55,5 @@
     "HYG_LQD",
     "RYLD_DIVO"
   ],
-  "total": 76
+  "total": 77
 }
