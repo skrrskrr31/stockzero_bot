@@ -26,7 +26,8 @@
     "TSLA",
     "COIN",
     "DDOG",
-    "PYPL"
+    "PYPL",
+    "PLTR"
   ],
   "race_count": 27,
   "dividend_pairs": [
@@ -58,5 +59,5 @@
     "DGRO_VIG",
     "SCHD_VYM"
   ],
-  "total": 81
+  "total": 82
 }
