@@ -30,7 +30,7 @@
     "PLTR",
     "JPM"
   ],
-  "race_count": 28,
+  "race_count": 29,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -61,5 +61,5 @@
     "SCHD_VYM",
     "JEPQ_QYLD"
   ],
-  "total": 85
+  "total": 86
 }
