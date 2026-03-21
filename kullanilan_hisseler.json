@@ -27,7 +27,8 @@
     "COIN",
     "DDOG",
     "PYPL",
-    "PLTR"
+    "PLTR",
+    "JPM"
   ],
   "race_count": 28,
   "dividend_pairs": [
@@ -60,5 +61,5 @@
     "SCHD_VYM",
     "JEPQ_QYLD"
   ],
-  "total": 84
+  "total": 85
 }
