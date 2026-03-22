@@ -31,7 +31,7 @@
     "JPM",
     "RBLX"
   ],
-  "race_count": 29,
+  "race_count": 30,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -63,5 +63,5 @@
     "JEPQ_QYLD",
     "JEPI_XYLD"
   ],
-  "total": 88
+  "total": 89
 }
