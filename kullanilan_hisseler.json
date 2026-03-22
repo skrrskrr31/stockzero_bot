@@ -28,7 +28,8 @@
     "DDOG",
     "PYPL",
     "PLTR",
-    "JPM"
+    "JPM",
+    "RBLX"
   ],
   "race_count": 29,
   "dividend_pairs": [
@@ -62,5 +63,5 @@
     "JEPQ_QYLD",
     "JEPI_XYLD"
   ],
-  "total": 87
+  "total": 88
 }
