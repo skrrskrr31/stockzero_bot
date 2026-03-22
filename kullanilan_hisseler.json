@@ -32,7 +32,7 @@
     "RBLX",
     "XOM"
   ],
-  "race_count": 30,
+  "race_count": 31,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -65,5 +65,5 @@
     "JEPI_XYLD",
     "SPHD_SPYD"
   ],
-  "total": 91
+  "total": 92
 }
