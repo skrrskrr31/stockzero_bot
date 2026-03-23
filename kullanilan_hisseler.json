@@ -31,7 +31,8 @@
     "JPM",
     "RBLX",
     "XOM",
-    "AAPL"
+    "AAPL",
+    "INTC"
   ],
   "race_count": 32,
   "dividend_pairs": [
@@ -68,5 +69,5 @@
     "HYG_LQD",
     "PFF_PFFD"
   ],
-  "total": 96
+  "total": 97
 }
