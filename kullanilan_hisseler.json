@@ -33,7 +33,7 @@
     "XOM",
     "AAPL"
   ],
-  "race_count": 31,
+  "race_count": 32,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -67,5 +67,5 @@
     "SPHD_SPYD",
     "HYG_LQD"
   ],
-  "total": 94
+  "total": 95
 }
