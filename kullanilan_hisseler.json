@@ -30,7 +30,8 @@
     "PLTR",
     "JPM",
     "RBLX",
-    "XOM"
+    "XOM",
+    "AAPL"
   ],
   "race_count": 31,
   "dividend_pairs": [
@@ -66,5 +67,5 @@
     "SPHD_SPYD",
     "HYG_LQD"
   ],
-  "total": 93
+  "total": 94
 }
