@@ -34,7 +34,7 @@
     "AAPL",
     "INTC"
   ],
-  "race_count": 32,
+  "race_count": 33,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -69,5 +69,5 @@
     "HYG_LQD",
     "PFF_PFFD"
   ],
-  "total": 97
+  "total": 98
 }
