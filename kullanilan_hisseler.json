@@ -35,7 +35,7 @@
     "INTC",
     "SPOT"
   ],
-  "race_count": 33,
+  "race_count": 34,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -71,5 +71,5 @@
     "PFF_PFFD",
     "VNQ_IYR"
   ],
-  "total": 100
+  "total": 101
 }
