@@ -32,7 +32,8 @@
     "RBLX",
     "XOM",
     "AAPL",
-    "INTC"
+    "INTC",
+    "SPOT"
   ],
   "race_count": 33,
   "dividend_pairs": [
@@ -70,5 +71,5 @@
     "PFF_PFFD",
     "VNQ_IYR"
   ],
-  "total": 99
+  "total": 100
 }
