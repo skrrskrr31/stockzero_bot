@@ -34,7 +34,8 @@
     "AAPL",
     "INTC",
     "SPOT",
-    "AMD"
+    "AMD",
+    "NVDA"
   ],
   "race_count": 35,
   "dividend_pairs": [
@@ -74,5 +75,5 @@
     "JEPQ_JEPI",
     "DVY_HDV"
   ],
-  "total": 105
+  "total": 106
 }
