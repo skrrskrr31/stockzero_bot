@@ -37,7 +37,7 @@
     "AMD",
     "NVDA"
   ],
-  "race_count": 35,
+  "race_count": 36,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -75,5 +75,5 @@
     "JEPQ_JEPI",
     "DVY_HDV"
   ],
-  "total": 106
+  "total": 107
 }
