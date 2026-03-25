@@ -36,7 +36,7 @@
     "SPOT",
     "AMD"
   ],
-  "race_count": 34,
+  "race_count": 35,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -73,5 +73,5 @@
     "VNQ_IYR",
     "JEPQ_JEPI"
   ],
-  "total": 103
+  "total": 104
 }
