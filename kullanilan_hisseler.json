@@ -33,7 +33,8 @@
     "XOM",
     "AAPL",
     "INTC",
-    "SPOT"
+    "SPOT",
+    "AMD"
   ],
   "race_count": 34,
   "dividend_pairs": [
@@ -72,5 +73,5 @@
     "VNQ_IYR",
     "JEPQ_JEPI"
   ],
-  "total": 102
+  "total": 103
 }
