@@ -38,7 +38,7 @@
     "NVDA",
     "AVGO"
   ],
-  "race_count": 36,
+  "race_count": 37,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -77,5 +77,5 @@
     "DVY_HDV",
     "O_STAG"
   ],
-  "total": 109
+  "total": 110
 }
