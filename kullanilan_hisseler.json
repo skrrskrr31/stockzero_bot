@@ -36,7 +36,8 @@
     "SPOT",
     "AMD",
     "NVDA",
-    "AVGO"
+    "AVGO",
+    "MU"
   ],
   "race_count": 37,
   "dividend_pairs": [
@@ -78,5 +79,5 @@
     "O_STAG",
     "JEPQ_QYLD"
   ],
-  "total": 111
+  "total": 112
 }
