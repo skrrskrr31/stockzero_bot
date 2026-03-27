@@ -37,7 +37,8 @@
     "AMD",
     "NVDA",
     "AVGO",
-    "MU"
+    "MU",
+    "MA"
   ],
   "race_count": 38,
   "dividend_pairs": [
@@ -80,5 +81,5 @@
     "JEPQ_QYLD",
     "RYLD_DIVO"
   ],
-  "total": 114
+  "total": 115
 }
