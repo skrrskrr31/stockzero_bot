@@ -39,7 +39,7 @@
     "AVGO",
     "MU"
   ],
-  "race_count": 37,
+  "race_count": 38,
   "dividend_pairs": [
     "DGRO_VIG",
     "O_STAG",
@@ -79,5 +79,5 @@
     "O_STAG",
     "JEPQ_QYLD"
   ],
-  "total": 112
+  "total": 113
 }
