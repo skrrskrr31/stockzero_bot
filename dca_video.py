@@ -11,6 +11,7 @@ import cv2
 import numpy as np
 import yfinance as yf
 from PIL import Image, ImageDraw, ImageFont
+from scipy.interpolate import make_interp_spline
 
 WIDTH, HEIGHT = 1080, 1920
 FPS    = 30
@@ -117,13 +118,27 @@ def create_dca_video(ticker=None, monthly=100, years=10, used_tickers=None):
     profit         = final_value - total_invested
     port_color     = GREEN if final_value >= total_invested else RED
 
+    # Spline interpolation — her iki seriyi yumuşat
+    def _smooth(series):
+        x_raw  = np.linspace(0, 1, len(series))
+        x_fine = np.linspace(0, 1, len(series) * 10)
+        k      = min(3, len(series) - 1)
+        try:
+            return make_interp_spline(x_raw, series, k=k)(x_fine).tolist()
+        except Exception:
+            return series
+
+    inv_smooth  = _smooth(invested)
+    port_smooth = _smooth(portfolio)
+    n_s = len(inv_smooth)
+
     # Scale both series together
-    all_vals  = invested + portfolio
+    all_vals  = inv_smooth + port_smooth
     lo, hi    = min(all_vals), max(all_vals)
     rng       = hi - lo or 1
 
     def vy(v): return int(CHART_B - (v - lo) / rng * (CHART_B - CHART_T))
-    def ix(i): return int(CHART_L + i / (n-1) * (CHART_R - CHART_L))
+    def ix(i): return int(CHART_L + i / (n_s - 1) * (CHART_R - CHART_L))
 
     total_f = FPS * (ANIM_SECS + HOLD_SECS)
     anim_f  = FPS * ANIM_SECS
@@ -161,10 +176,10 @@ def create_dca_video(ticker=None, monthly=100, years=10, used_tickers=None):
         draw.rectangle([(350, 310), (390, 340)], fill=port_color)
         draw.text((405, 305), "Portfolio Value", font=fxs, fill=port_color)
 
-        # Animated lines
-        vis = max(2, int(prog * n))
-        inv_pts  = [(ix(i), vy(invested[i]))  for i in range(vis)]
-        port_pts = [(ix(i), vy(portfolio[i])) for i in range(vis)]
+        # Animated smooth lines
+        vis = max(2, int(prog * n_s))
+        inv_pts  = [(ix(i), vy(inv_smooth[i]))  for i in range(vis)]
+        port_pts = [(ix(i), vy(port_smooth[i])) for i in range(vis)]
 
         if len(inv_pts) >= 2:
             draw.line(inv_pts,  fill=GRAY,       width=3)
@@ -176,7 +191,7 @@ def create_dca_video(ticker=None, monthly=100, years=10, used_tickers=None):
             # Current portfolio dot
             cx, cy = port_pts[-1]
             draw.ellipse((cx-8, cy-8, cx+8, cy+8), fill=port_color)
-            curr_v = portfolio[vis-1]
+            curr_v = port_smooth[vis-1]
             draw.text((cx+12, cy-20), _fmt(curr_v), font=fxs, fill=port_color)
 
         # Hold: final comparison panel
@@ -197,10 +212,10 @@ def create_dca_video(ticker=None, monthly=100, years=10, used_tickers=None):
             ret_str  = f"{gain_pct:+.1f}%"
 
             for label, val, col, dy in [
-                (inv_str,  port_color, GRAY,       0),
-                (port_str, port_color, port_color, 60),
-                (prof_str, GOLD,       GOLD,       120),
-                (ret_str,  GOLD,       GOLD,       180),
+                (inv_str,  inv_str,  GRAY,       0),
+                (port_str, port_str, port_color, 60),
+                (prof_str, prof_str, GOLD,       120),
+                (ret_str,  ret_str,  GOLD,       180),
             ]:
                 vb  = draw.textbbox((0,0), val, font=fs)
                 draw.text((WIDTH - (vb[2]-vb[0]) - 80, row1_y + dy), val, font=fs, fill=col)
