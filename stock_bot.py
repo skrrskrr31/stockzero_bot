@@ -124,11 +124,11 @@ def _pick_stock(used_single: list) -> str:
 def _single_title(ticker: str, inv: float, end: float, pct: float, years: int) -> str:
     company = COMPANY_NAMES.get(ticker, ticker)
     opts = [
-        f"If You Invested ${inv:,.0f} in {ticker} {years} Years Ago... \U0001f631",
-        f"{ticker}: ${inv:,.0f} \u2192 {_fmt(end)} in {years} Years \U0001f4c8",
-        f"What ${inv:,.0f} in {company} {years} Years Ago Looks Like Today \U0001f92f",
-        f"{company} Stock Growth: ${inv:,.0f} Became {_fmt(end)} \U0001f680",
-        f"${inv:,.0f} in {ticker} {years} Yrs Ago = {_fmt(end)} Today ({pct:+.0f}%)",
+        f"If You Invested ${inv:,.0f} in {ticker} {years} Years Ago... \U0001f631 #Shorts",
+        f"{ticker}: ${inv:,.0f} \u2192 {_fmt(end)} in {years} Years \U0001f4c8 #Shorts",
+        f"What ${inv:,.0f} in {company} {years} Years Ago Looks Like Today \U0001f92f #Shorts",
+        f"{company} Stock Growth: ${inv:,.0f} Became {_fmt(end)} \U0001f680 #Shorts",
+        f"${inv:,.0f} in {ticker} {years} Yrs Ago = {_fmt(end)} Today ({pct:+.0f}%) #Shorts",
     ]
     return random.choice(opts)
 
@@ -142,17 +142,18 @@ def _single_desc(ticker: str, inv: float, end: float, pct: float, years: int) ->
         f"investment in {ticker} stock over the past {years} years.\n\n"
         f"\u26a0\ufe0f NOT financial advice. Past performance \u2260 future results. "
         f"Always do your own research.\n\n"
-        f"#stocks #investing #{ticker} #stockmarket #wealth #finance "
-        f"#shorts #investing101 #stockcharts #wallstreet #money"
+        f"\U0001f514 Follow for daily stock breakdowns!\n\n"
+        f"#Shorts #stocks #investing #{ticker} #stockmarket #wealth #finance "
+        f"#investing101 #stockcharts #wallstreet #money #stockanalysis #personalfinance"
     )
 
 
 def _race_title(winner: str, winner_label: str, end: float, inv: float, years: int) -> str:
     opts = [
-        f"${inv:,.0f} in Every Stock {years} Years Ago \u2014 Who Won? \U0001f3c6",
-        f"The {years}-Year Stock Race: {winner_label} DOMINATES \U0001f4c8",
-        f"Which Stock Turned ${inv:,.0f} Into the MOST? ({years} Years) \U0001f92f",
-        f"{winner_label} vs Everyone: {years}-Year ${inv:,.0f} Challenge \U0001f680",
+        f"${inv:,.0f} in Every Stock {years} Years Ago \u2014 Who Won? \U0001f3c6 #Shorts",
+        f"The {years}-Year Stock Race: {winner_label} DOMINATES \U0001f4c8 #Shorts",
+        f"Which Stock Turned ${inv:,.0f} Into the MOST? ({years} Years) \U0001f92f #Shorts",
+        f"{winner_label} vs Everyone: {years}-Year ${inv:,.0f} Challenge \U0001f680 #Shorts",
     ]
     return random.choice(opts)
 
@@ -168,8 +169,9 @@ def _race_desc(winner: str, winner_label: str, end: float, inv: float, years: in
         f"Watch the animated bar chart race to see how rankings changed over the years.\n\n"
         f"\u26a0\ufe0f NOT financial advice. Past performance \u2260 future results.\n\n"
         f"{featured_line}"
-        f"#stocks #investing #stockrace #barchartrace #stockmarket #finance "
-        f"#shorts #wealth #nvda #aapl #tsla #investing101"
+        f"\U0001f514 Follow for daily stock breakdowns!\n\n"
+        f"#Shorts #stocks #investing #stockrace #barchartrace #stockmarket #finance "
+        f"#wealth #nvda #aapl #tsla #investing101 #stockanalysis #personalfinance"
     )
 
 
@@ -187,8 +189,11 @@ def _upload(video_path: str, title: str, description: str, token_str: str) -> st
             "title":       title,
             "description": description,
             "tags":        ["stocks", "investing", "finance", "shorts",
-                            "stockmarket", "wealth", "money"],
-            "categoryId":  "25",
+                            "stockmarket", "wealth", "money", "stock market",
+                            "investing for beginners", "financial education",
+                            "passive income", "stock analysis", "personal finance",
+                            "how to invest", "stock chart"],
+            "categoryId":  "26",
         },
         "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
     }
@@ -302,10 +307,10 @@ def main():
         s2  = result["compare"]
         mth = f"${s1['monthly']:,.0f}"
         title_opts = [
-            f"{t1} vs {t2}: Which Pays More? ({category}) \U0001f4b0",
-            f"${INVESTMENT:,} in {t1} vs {t2} — Dividend Showdown! \U0001f4c8",
-            f"{t1} or {t2}? Best Monthly Income on ${INVESTMENT:,} \U0001f4ca",
-            f"{category}: {t1} vs {t2} — Which Wins? \U0001f3c6",
+            f"{t1} vs {t2}: Which Pays More? ({category}) \U0001f4b0 #Shorts",
+            f"${INVESTMENT:,} in {t1} vs {t2} — Dividend Showdown! \U0001f4c8 #Shorts",
+            f"{t1} or {t2}? Best Monthly Income on ${INVESTMENT:,} \U0001f4ca #Shorts",
+            f"{category}: {t1} vs {t2} — Which Wins? \U0001f3c6 #Shorts",
         ]
         title = random.choice(title_opts)
         winner = t1 if s1["monthly"] >= s2["monthly"] else t2
@@ -320,7 +325,9 @@ def main():
             f"  Monthly   : ${s2['monthly']:,.0f}/mo\n"
             f"  DRIP      : ${s2['drip']:,.0f}\n\n"
             f"NOT financial advice. Always do your own research.\n\n"
-            f"#{t1} #{t2} #dividends #passiveincome #investing #shorts #finance #{category.replace(' ','').replace('—','')}"
+            f"\U0001f514 Follow for daily dividend breakdowns!\n\n"
+            f"#Shorts #{t1} #{t2} #dividends #passiveincome #investing #finance "
+            f"#dividendinvesting #etf #monthlyincome #{category.replace(' ','').replace('—','')}"
         )
         used.setdefault("dividend_pairs", []).append(f"{t1}_{t2}")
 
