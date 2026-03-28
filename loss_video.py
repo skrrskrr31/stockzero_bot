@@ -11,6 +11,7 @@ import cv2
 import numpy as np
 import yfinance as yf
 from PIL import Image, ImageDraw, ImageFont
+from scipy.interpolate import make_interp_spline
 
 WIDTH, HEIGHT = 1080, 1920
 FPS    = 30
@@ -190,15 +191,23 @@ def create_loss_video(used_tickers=None):
     loss_pct    = (final_val - investment) / investment * 100
     peak_loss   = (final_val - peak_val) / peak_val * 100
 
-    print(f"  Loss scenario: {ticker} | start={_fmt(investment)} → end={_fmt(final_val)} ({loss_pct:+.1f}%)")
+    print(f"  Loss scenario: {ticker} | start={_fmt(investment)} -> end={_fmt(final_val)} ({loss_pct:+.1f}%)")
 
-    n   = len(portfolio)
-    lo  = min(0, min(portfolio))
-    hi  = max(portfolio)
+    # Spline interpolation — akıcı çizgi
+    x_raw  = np.linspace(0, 1, len(portfolio))
+    x_fine = np.linspace(0, 1, len(portfolio) * 10)
+    k      = min(3, len(portfolio) - 1)
+    try:
+        port_smooth = make_interp_spline(x_raw, portfolio, k=k)(x_fine).tolist()
+    except Exception:
+        port_smooth = portfolio
+    n   = len(port_smooth)
+    lo  = min(0, min(port_smooth))
+    hi  = max(port_smooth)
     rng = hi - lo or 1
 
     def vy(v): return int(CHART_B - (v - lo) / rng * (CHART_B - CHART_T))
-    def ix(i): return int(CHART_L + i / (n-1) * (CHART_R - CHART_L))
+    def ix(i): return int(CHART_L + i / (n - 1) * (CHART_R - CHART_L))
 
     total_f = FPS * (ANIM_SECS + HOLD_SECS)
     anim_f  = FPS * ANIM_SECS
@@ -231,9 +240,9 @@ def create_loss_video(used_tickers=None):
         draw.text((60, 300), company, font=fx, fill=GRAY)
         draw.text((60, 355), note,    font=fxs, fill=ORANGE)
 
-        # Animated RED line
+        # Animated smooth RED line
         vis  = max(2, int(prog * n))
-        pts  = [(ix(i), vy(portfolio[i])) for i in range(vis)]
+        pts  = [(ix(i), vy(port_smooth[i])) for i in range(vis)]
         if len(pts) >= 2:
             draw.line(pts, fill=RED, width=4)
 
@@ -246,7 +255,7 @@ def create_loss_video(used_tickers=None):
                 img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
                 draw = ImageDraw.Draw(img)
             draw.ellipse((cx-7, cy-7, cx+7, cy+7), fill=WHITE)
-            curr = portfolio[vis-1]
+            curr = port_smooth[vis-1]
             draw.text((cx+12, cy-22), _fmt(curr), font=fxs, fill=WHITE)
 
         # Hold: summary panel
