@@ -2,13 +2,12 @@ name: Stock Chart Bot
 
 on:
   schedule:
-    # UTC times → TR: +3 saat
-    - cron: "0 6  * * *"   # TR 09:00
-    - cron: "0 9  * * *"   # TR 12:00
-    - cron: "0 12 * * *"   # TR 15:00
-    - cron: "0 15 * * *"   # TR 18:00
-    - cron: "0 18 * * *"   # TR 21:00
-  workflow_dispatch:        # Manuel tetikleme
+    # UTC times (TR: +3 saat)
+    - cron: "0 7  * * *"   # TR 10:00 - Trending (bugünün en çok hareket eden hissesi)
+    - cron: "0 10 * * *"   # TR 13:00 - DCA (aylık yatırım senaryosu)
+    - cron: "0 13 * * *"   # TR 16:00 - Loss (çöküş senaryosu)
+    - cron: "0 16 * * *"   # TR 19:00 - Buffett (Berkshire portföyü)
+  workflow_dispatch:
 
 jobs:
   run-bot:
@@ -34,13 +33,13 @@ jobs:
       - name: Install Python deps
         run: pip install -r requirements.txt
 
-      - name: Patch font path for Linux
+      - name: Patch font paths for Linux
         run: |
-          # Patch all Python files: Windows font paths → Linux Liberation fonts
-          for f in stock_chart.py bar_chart_race.py dividend_video.py tts_helper.py stock_bot.py; do
-            sed -i 's|C:/Windows/Fonts/|/usr/share/fonts/truetype/liberation/|g' "$f" || true
-            sed -i 's|"arialbd.ttf"|"LiberationSans-Bold.ttf"|g'    "$f" || true
-            sed -i 's|"arial.ttf"|"LiberationSans-Regular.ttf"|g'   "$f" || true
+          NEW_FONTS_DIR="/usr/share/fonts/truetype/liberation/"
+          for f in stock_bot.py trending_video.py dca_video.py loss_video.py buffett_video.py; do
+            sed -i "s|C:/Windows/Fonts/||g" "" || true
+            sed -i 's|"arialbd.ttf"|"LiberationSans-Bold.ttf"|g'    "" || true
+            sed -i 's|"arial.ttf"|"LiberationSans-Regular.ttf"|g'   "" || true
           done
 
       - name: Run stock bot
