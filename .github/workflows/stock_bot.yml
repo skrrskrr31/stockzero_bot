@@ -35,16 +35,17 @@ jobs:
 
       - name: Patch font paths for Linux
         run: |
-          NEW_FONTS_DIR="/usr/share/fonts/truetype/liberation/"
           for f in stock_bot.py trending_video.py dca_video.py loss_video.py buffett_video.py; do
-            sed -i "s|C:/Windows/Fonts/||g" "" || true
-            sed -i 's|"arialbd.ttf"|"LiberationSans-Bold.ttf"|g'    "" || true
-            sed -i 's|"arial.ttf"|"LiberationSans-Regular.ttf"|g'   "" || true
+            [ -f "$f" ] || continue
+            sed -i 's|C:/Windows/Fonts/|/usr/share/fonts/truetype/liberation/|g' "$f"
+            sed -i 's|"arialbd.ttf"|"LiberationSans-Bold.ttf"|g'   "$f"
+            sed -i 's|"arial.ttf"|"LiberationSans-Regular.ttf"|g'  "$f"
           done
 
       - name: Run stock bot
         env:
-          TOKEN_JSON: ${{ secrets.TOKEN_JSON }}
+          TOKEN_JSON:   ${{ secrets.TOKEN_JSON }}
+          PIXABAY_KEY:  ${{ secrets.PIXABAY_KEY }}
         run: python stock_bot.py
 
       - name: Commit used-stocks tracker

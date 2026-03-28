@@ -23,10 +23,7 @@ from trending_video import create_trending_video
 from dca_video      import create_dca_video
 from loss_video     import create_loss_video
 from buffett_video  import create_buffett_video
-from tts_helper     import (
-    generate_tts, merge_audio_video,
-    build_narration, build_race_narration,
-)
+from music_helper import get_music, mix_music_into_video
 
 def _fmt(v):
     if v >= 1_000_000: return f"${v/1_000_000:.2f}M"
@@ -401,10 +398,18 @@ def main():
 
     print(f"Title: {title}")
 
-    # Compress + upload
+    # Add background music + compress + upload
     if final_path is None:
         final_path = raw_path
-    final_path = _compress(final_path)
+    music_type_map = {0: "trending_gainer", 1: "dca", 2: "loss", 3: "buffett"}
+    music_type = music_type_map.get(video_type, "dca")
+    if video_type == 0 and locals().get("dir_", "gainer") == "loser":
+        music_type = "trending_loser"
+    music_path = get_music(music_type)
+    if music_path:
+        final_path = mix_music_into_video(final_path, music_path)
+    else:
+        final_path = _compress(final_path)
     _upload(final_path, title, desc, token_str)
 
     # Cleanup
