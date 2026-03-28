@@ -19,13 +19,19 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-from stock_chart    import create_video as create_single_video
-from bar_chart_race import create_race_video, SECTORS, _fmt
-from dividend_video import create_dividend_video
+from trending_video import create_trending_video
+from dca_video      import create_dca_video
+from loss_video     import create_loss_video
+from buffett_video  import create_buffett_video
 from tts_helper     import (
     generate_tts, merge_audio_video,
     build_narration, build_race_narration,
 )
+
+def _fmt(v):
+    if v >= 1_000_000: return f"${v/1_000_000:.2f}M"
+    if v >= 1_000:     return f"${v:,.0f}"
+    return f"${v:.0f}"
 
 # ── Stock universe (single-stock videos) ──────────────────────────────────────
 SINGLE_STOCKS = [
@@ -94,10 +100,8 @@ DIVIDEND_PAIRS = [
     ("HYG",   "LQD",   "Bond Income ETF"),
 ]
 
-# Video type rotation — repeats every 3: single, race, dividend
-VIDEO_SCHEDULE = [0, 1, 2]   # indices: 0=single, 1=race, 2=dividend
-
-SECTORS_ORDER = ["tech", "realestate", "healthcare", "finance", "energy", "consumer"]
+# Video type rotation — 4 types: trending, DCA, loss, buffett
+VIDEO_SCHEDULE = [0, 1, 2, 3]   # 0=trending, 1=dca, 2=loss, 3=buffett
 
 
 # ── Used-stock tracker ────────────────────────────────────────────────────────
@@ -239,136 +243,161 @@ def main():
     total      = used.get("total", 0)
     video_type = VIDEO_SCHEDULE[total % len(VIDEO_SCHEDULE)]
 
-    MODE_NAMES = {0: "SINGLE STOCK", 1: "BAR CHART RACE", 2: "DIVIDEND"}
+    MODE_NAMES = {0: "TRENDING", 1: "DCA", 2: "LOSS SCENARIO", 3: "BUFFETT"}
     print(f"=== Stock Bot | {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')} ===")
     print(f"Mode: {MODE_NAMES[video_type]}")
 
-    final_path = None
+    final_path = raw_path = None
+    title = desc = ""
 
-    if video_type == 1:
-        # ── Bar chart race ────────────────────────────────────────
-        # Rotate through sectors
-        sector_idx = used.get("race_count", 0) % len(SECTORS_ORDER)
-        sector     = SECTORS_ORDER[sector_idx]
-        print(f"  Sector: {sector}")
-
-        result   = create_race_video(sector=sector, investment=INVESTMENT, years=YEARS)
+    if video_type == 0:
+        # ── Trending stock ────────────────────────────────────────
+        used_t = used.get("trending", [])
+        result = create_trending_video(used_tickers=used_t)
+        if result is None:
+            print("ERROR: trending video failed"); sys.exit(1)
         raw_path = result["video_path"]
+        ticker   = result["ticker"]
+        company  = result["company"]
+        pct      = result["pct_change"]
+        dir_     = result["direction"]
+        sign     = "+" if pct > 0 else ""
+        arrow    = "📈" if dir_ == "gainer" else "📉"
 
-        narration = build_race_narration(result["sector_label"], INVESTMENT, YEARS)
-        print(f"  Narration: {narration}")
-        mp3 = "race_speech.mp3"
-        try:
-            generate_tts(narration, mp3)
-            final_path = f"race_{sector}_final.mp4"
-            final_path = merge_audio_video(raw_path, mp3, final_path)
-            if os.path.exists(mp3):
-                os.remove(mp3)
-        except Exception as e:
-            print(f"  TTS skipped: {e}")
-            final_path = raw_path
-
-        title = _race_title(result["winner"], result["winner_label"],
-                            result["end_val"], INVESTMENT, YEARS)
-        desc  = _race_desc(result["winner"], result["winner_label"],
-                           result["end_val"], INVESTMENT, YEARS, sector)
-
-        used["race_count"] = used.get("race_count", 0) + 1
-
-    elif video_type == 2:
-        # ── Dividend comparison ───────────────────────────────────
-        used_pairs  = used.get("dividend_pairs", [])
-        # avoid recently used pairs (track by "T1_T2" key)
-        avail_pairs = [p for p in DIVIDEND_PAIRS
-                       if f"{p[0]}_{p[1]}" not in used_pairs[-6:]]
-        if not avail_pairs:
-            avail_pairs = DIVIDEND_PAIRS
-        t1, t2, category = random.choice(avail_pairs)
-        print(f"  Dividend pair: {t1} vs {t2}  [{category}]")
-
-        result   = create_dividend_video(ticker=t1, compare_ticker=t2,
-                                         investment=INVESTMENT)
-        raw_path = result["video_path"]
-
-        # Short TTS — no spoilers
-        narration = f"10k USD. {t1} versus {t2}."
-        mp3 = "div_speech.mp3"
-        try:
-            generate_tts(narration, mp3)
-            final_path = f"{t1}_vs_{t2}_final.mp4"
-            final_path = merge_audio_video(raw_path, mp3, final_path)
-            if os.path.exists(mp3):
-                os.remove(mp3)
-        except Exception as e:
-            print(f"  TTS skipped: {e}")
-            final_path = raw_path
-
-        s1  = result
-        s2  = result["compare"]
-        mth = f"${s1['monthly']:,.0f}"
         title_opts = [
-            f"{t1} vs {t2}: Which Pays More? ({category}) \U0001f4b0 #Shorts",
-            f"${INVESTMENT:,} in {t1} vs {t2} — Dividend Showdown! \U0001f4c8 #Shorts",
-            f"{t1} or {t2}? Best Monthly Income on ${INVESTMENT:,} \U0001f4ca #Shorts",
-            f"{category}: {t1} vs {t2} — Which Wins? \U0001f3c6 #Shorts",
+            f"{ticker} IS {dir_.upper()}ING {sign}{pct:.1f}% TODAY! {arrow} #Shorts",
+            f"Why Is {company} Stock Moving? {sign}{pct:.1f}% {arrow} #Shorts",
+            f"TODAY'S TOP STOCK MOVER: {ticker} {sign}{pct:.1f}% {arrow} #Shorts",
+            f"{ticker} {sign}{pct:.1f}% — What's Happening? {arrow} #Shorts",
         ]
         title = random.choice(title_opts)
-        winner = t1 if s1["monthly"] >= s2["monthly"] else t2
         desc  = (
-            f"${INVESTMENT:,} invested in {t1} vs {t2} — same start date, fair comparison!\n\n"
-            f"{t1}:\n"
-            f"  Portfolio : ${s1['portfolio']:,.0f}\n"
-            f"  Monthly   : ${s1['monthly']:,.0f}/mo\n"
-            f"  DRIP      : ${s1['drip']:,.0f}\n\n"
-            f"{t2}:\n"
-            f"  Portfolio : ${s2['portfolio']:,.0f}\n"
-            f"  Monthly   : ${s2['monthly']:,.0f}/mo\n"
-            f"  DRIP      : ${s2['drip']:,.0f}\n\n"
-            f"NOT financial advice. Always do your own research.\n\n"
-            f"\U0001f514 Follow for daily dividend breakdowns!\n\n"
-            f"#Shorts #{t1} #{t2} #dividends #passiveincome #investing #finance "
-            f"#dividendinvesting #etf #monthlyincome #{category.replace(' ','').replace('—','')}"
+            f"{company} ({ticker}) moved {sign}{pct:.1f}% today!\n\n"
+            f"Watch the animated chart to see today's price action and 30-day trend.\n\n"
+            f"⚠️ NOT financial advice. Always do your own research.\n\n"
+            f"🔔 Follow for daily stock movers!\n\n"
+            f"#Shorts #stocks #{ticker} #{company.replace(' ','')} #stockmarket "
+            f"#investing #finance #daytrading #stocknews #wallstreet #trading"
         )
-        used.setdefault("dividend_pairs", []).append(f"{t1}_{t2}")
+        used.setdefault("trending", []).append(ticker)
+        used["trending"] = used["trending"][-30:]
+        final_path = raw_path
+
+    elif video_type == 1:
+        # ── DCA ───────────────────────────────────────────────────
+        used_t   = used.get("dca", [])
+        MONTHLY  = random.choice([50, 100, 100, 200])   # vary amount
+        YEARS_D  = random.choice([5, 10, 10, 15])
+        result   = create_dca_video(monthly=MONTHLY, years=YEARS_D, used_tickers=used_t)
+        if result is None:
+            print("ERROR: DCA video failed"); sys.exit(1)
+        raw_path = result["video_path"]
+        ticker   = result["ticker"]
+        company  = result["company"]
+        total_in = result["total_invested"]
+        final_v  = result["final_value"]
+        gain     = result["gain_pct"]
+        color_e  = "📈" if final_v >= total_in else "📉"
+
+        title_opts = [
+            f"${MONTHLY}/Month in {ticker} for {YEARS_D} Years... {color_e} #Shorts",
+            f"What ${MONTHLY}/Month in {company} Did in {YEARS_D} Years {color_e} #Shorts",
+            f"DCA Strategy: ${MONTHLY}/Month in {ticker} = {_fmt(final_v)}? {color_e} #Shorts",
+            f"${MONTHLY} Every Month in {ticker} for {YEARS_D} Years 🤯 #Shorts",
+        ]
+        title = random.choice(title_opts)
+        desc  = (
+            f"Investing ${MONTHLY} every month in {company} ({ticker}) for {YEARS_D} years:\n\n"
+            f"  Total invested: {_fmt(total_in)}\n"
+            f"  Portfolio today: {_fmt(final_v)}\n"
+            f"  Return: {gain:+.1f}%\n\n"
+            f"This is Dollar Cost Averaging (DCA) — investing a fixed amount regularly "
+            f"regardless of the price.\n\n"
+            f"⚠️ NOT financial advice. Past performance ≠ future results.\n\n"
+            f"🔔 Follow for daily investing breakdowns!\n\n"
+            f"#Shorts #DCA #investing #{ticker} #stockmarket #finance #wealth "
+            f"#dollarcostaveraging #personalfinance #investing101 #money"
+        )
+        used.setdefault("dca", []).append(ticker)
+        used["dca"] = used["dca"][-30:]
+        final_path = raw_path
+
+    elif video_type == 2:
+        # ── Loss scenario ─────────────────────────────────────────
+        used_t = used.get("loss", [])
+        result = create_loss_video(used_tickers=used_t)
+        if result is None:
+            print("ERROR: loss video failed"); sys.exit(1)
+        raw_path = result["video_path"]
+        label    = result["label"]
+        company  = result["company"]
+        loss_pct = result["loss_pct"]
+        final_v  = result["final_val"]
+        invested = result["investment"]
+
+        title_opts = [
+            f"What Happened to $10,000 in {label}? 💀 #Shorts",
+            f"{label} Stock Crash: $10,000 → {_fmt(final_v)} 📉 #Shorts",
+            f"This Is Why People LOST Everything in {label} 😱 #Shorts",
+            f"$10,000 in {label}... Here's What Happened 📉 #Shorts",
+        ]
+        title = random.choice(title_opts)
+        desc  = (
+            f"$10,000 invested in {company} ({label}):\n\n"
+            f"  Starting value: ${invested:,}\n"
+            f"  Ending value: {_fmt(final_v)}\n"
+            f"  Total loss: {loss_pct:.1f}%\n\n"
+            f"This is why diversification matters. Never put all your eggs in one basket.\n\n"
+            f"⚠️ NOT financial advice. Always do your own research.\n\n"
+            f"🔔 Follow to learn from market history!\n\n"
+            f"#Shorts #stocks #stockcrash #{label} #investing #finance #stockmarket "
+            f"#wallstreet #crash #loss #investing101 #money #personalfinance"
+        )
+        used.setdefault("loss", []).append(result["ticker"])
+        used["loss"] = used["loss"][-20:]
+        final_path = raw_path
 
     else:
-        # ── Single stock ──────────────────────────────────────────
-        tried = []
-        result = raw_path = None
-        for _attempt in range(5):
-            ticker  = _pick_stock(used.get("single", []) + tried)
-            company = COMPANY_NAMES.get(ticker, ticker)
-            print(f"Ticker: {ticker} ({company})")
-            try:
-                result   = create_single_video(ticker, investment=INVESTMENT, years=YEARS)
-                raw_path = result["video_path"]
-                break
-            except Exception as e:
-                print(f"  Skipping {ticker}: {e}")
-                tried.append(ticker)
+        # ── Buffett ───────────────────────────────────────────────
+        result = create_buffett_video()
         if result is None:
-            print("ERROR: No valid ticker found after 5 attempts.")
-            sys.exit(1)
+            print("ERROR: buffett video failed"); sys.exit(1)
+        raw_path = result["video_path"]
+        angle    = result.get("angle", "top5_holdings")
 
-        # Short TTS — no final value spoiler
-        narration = build_narration(ticker, company, INVESTMENT, YEARS)
-        print(f"  Narration: {narration}")
-        mp3 = "speech.mp3"
-        try:
-            generate_tts(narration, mp3)
-            final_path = f"{ticker}_final.mp4"
-            final_path = merge_audio_video(raw_path, mp3, final_path)
-            if os.path.exists(mp3):
-                os.remove(mp3)
-        except Exception as e:
-            print(f"  TTS skipped: {e}")
-            final_path = raw_path
-
-        title = _single_title(ticker, INVESTMENT, result["end_value"],
-                               result["gain_pct"], YEARS)
-        desc  = _single_desc(ticker, INVESTMENT, result["end_value"],
-                              result["gain_pct"], YEARS)
-        used.setdefault("single", []).append(ticker)
+        if angle == "top5_holdings":
+            title_opts = [
+                "Warren Buffett's Top 5 Stock Holdings RIGHT NOW 💰 #Shorts",
+                "What Buffett Is Holding in 2025 — Top 5 Picks 📈 #Shorts",
+                "Berkshire Hathaway Portfolio: Top 5 Positions 🏆 #Shorts",
+                "This Is What Warren Buffett Actually Owns 🤯 #Shorts",
+            ]
+        elif angle == "vs_sp500":
+            brk = _fmt(result.get("brk_final", 0))
+            spy = _fmt(result.get("spy_final", 0))
+            title_opts = [
+                f"Buffett vs S&P 500: 10 Years — Who Won? 🏆 #Shorts",
+                f"Berkshire vs S&P 500: $10,000 10 Years Ago 📈 #Shorts",
+                f"Did Warren Buffett Beat the Market? 🤔 #Shorts",
+                f"BRK vs SPY 10 Years — Shocking Result 😱 #Shorts",
+            ]
+        else:
+            title_opts = [
+                "Buffett's $10,000 Picks: 10-Year Returns Revealed 📈 #Shorts",
+                "Warren Buffett Stock Picks — Real 10-Year Returns 🚀 #Shorts",
+                "$10,000 in Buffett's Top Picks 10 Years Ago 🤯 #Shorts",
+                "Did Buffett's Stocks Beat the Market? 📊 #Shorts",
+            ]
+        title = random.choice(title_opts)
+        desc  = (
+            f"Warren Buffett / Berkshire Hathaway portfolio breakdown!\n\n"
+            f"Based on SEC 13F filings — updated quarterly.\n\n"
+            f"⚠️ NOT financial advice. Past performance ≠ future results.\n\n"
+            f"🔔 Follow for daily investing breakdowns!\n\n"
+            f"#Shorts #WarrenBuffett #Berkshire #investing #stocks #finance "
+            f"#stockmarket #wealth #value #investing101 #money #personalfinance"
+        )
+        final_path = raw_path
 
     print(f"Title: {title}")
 
