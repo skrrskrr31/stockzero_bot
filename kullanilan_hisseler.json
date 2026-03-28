@@ -84,11 +84,14 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 122,
+  "total": 123,
   "trending": [
     "SOFI"
   ],
   "dca": [
     "SPY"
+  ],
+  "loss": [
+    "LCID"
   ]
 }
