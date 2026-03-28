@@ -11,10 +11,11 @@ import numpy as np
 import yfinance as yf
 import requests
 from PIL import Image, ImageDraw, ImageFont
+from scipy.interpolate import make_interp_spline
 
 WIDTH, HEIGHT = 1080, 1920
 FPS    = 30
-ANIM_SECS = 15
+ANIM_SECS = 14
 HOLD_SECS = 4
 
 CHART_L, CHART_R = 85, 995
@@ -130,21 +131,58 @@ def create_trending_video(used_tickers=None):
     color   = GREEN if direction == "gainer" else RED
     print(f"  Trending: {ticker} ({pct:+.1f}%) — {direction}")
 
+    # Önce bugünün intraday chart'ını dene (5dk aralıklı)
+    # Eğer yoksa (piyasa kapalı/weekend) 5 günlük saatlik veri kullan
+    chart_label = "Today"
+    thirty_day_pct = None
     try:
-        hist   = yf.download(ticker, period="1mo", interval="1d", progress=False, auto_adjust=True)
+        hist = yf.download(ticker, period="1d", interval="5m", progress=False, auto_adjust=True)
         prices = hist["Close"].squeeze().dropna().tolist()
-        if len(prices) < 5:
-            raise ValueError("Insufficient data")
-    except Exception as e:
-        print(f"  Data error: {e}")
-        return None
+        if len(prices) < 10:
+            raise ValueError("Not enough intraday data")
+        chart_label = "Today (Intraday)"
+    except Exception:
+        try:
+            hist = yf.download(ticker, period="5d", interval="1h", progress=False, auto_adjust=True)
+            prices = hist["Close"].squeeze().dropna().tolist()
+            if len(prices) < 5:
+                raise ValueError("Not enough data")
+            chart_label = "5-Day"
+        except Exception as e:
+            print(f"  Data error: {e}")
+            return None
+
+    # 30 günlük değişimi ayrıca hesapla (sadece text için)
+    try:
+        hist30 = yf.download(ticker, period="1mo", interval="1d", progress=False, auto_adjust=True)
+        p30    = hist30["Close"].squeeze().dropna().tolist()
+        if len(p30) >= 2:
+            thirty_day_pct = (p30[-1] - p30[0]) / p30[0] * 100
+    except:
+        pass
 
     n = len(prices)
     lo, hi = min(prices), max(prices)
     rng = hi - lo or 1
 
-    def py(p): return int(CHART_B - (p - lo) / rng * (CHART_B - CHART_T))
-    def px(i): return int(CHART_L + i / (n-1) * (CHART_R - CHART_L))
+    # Smooth the price curve with spline interpolation
+    x_raw  = np.linspace(0, 1, n)
+    x_fine = np.linspace(0, 1, n * 12)          # 12× more points = smooth
+    k      = min(3, n - 1)                       # cubic if enough points
+    try:
+        spl          = make_interp_spline(x_raw, prices, k=k)
+        prices_smooth = spl(x_fine).tolist()
+    except Exception:
+        prices_smooth = prices
+        x_fine        = x_raw
+
+    n_smooth = len(prices_smooth)
+    lo_s  = min(prices_smooth)
+    hi_s  = max(prices_smooth)
+    rng_s = hi_s - lo_s or 1
+
+    def py(p): return int(CHART_B - (p - lo_s) / rng_s * (CHART_B - CHART_T))
+    def px(i): return int(CHART_L + i / (n_smooth - 1) * (CHART_R - CHART_L))
 
     total_f = FPS * (ANIM_SECS + HOLD_SECS)
     anim_f  = FPS * ANIM_SECS
@@ -154,12 +192,14 @@ def create_trending_video(used_tickers=None):
 
     fb = _font("arialbd.ttf", 120)
     fm = _font("arialbd.ttf", 56)
-    fs = _font("arialbd.ttf", 42)
-    fx = _font("arialbd.ttf", 35)
+    fs = _font("arialbd.ttf", 48)
+    fx = _font("arialbd.ttf", 36)
+    fxs= _font("arialbd.ttf", 28)
 
     banner_text = "TODAY'S TOP GAINER" if direction == "gainer" else "TODAY'S TOP LOSER"
     sign = "+" if pct > 0 else ""
     pct_str = f"{sign}{pct:.1f}%"
+    date_str = datetime.now().strftime("%B %d, %Y").upper()   # e.g. MARCH 28, 2026
 
     for fi in range(total_f):
         t     = fi / FPS
@@ -175,6 +215,10 @@ def create_trending_video(used_tickers=None):
         bb = draw.textbbox((0, 0), banner_text, font=fm)
         draw.text(((WIDTH - bb[2] + bb[0])//2, 72), banner_text, font=fm, fill=(0,0,0))
 
+        # Date — sağ alt köşe
+        db = draw.textbbox((0, 0), date_str, font=fx)
+        draw.text((WIDTH - (db[2]-db[0]) - 30, HEIGHT - 110), date_str, font=fx, fill=GRAY)
+
         # Ticker
         draw.text((60, 185), ticker, font=fb, fill=color)
         draw.text((60, 335), company, font=fs, fill=GRAY)
@@ -183,9 +227,9 @@ def create_trending_video(used_tickers=None):
         pb = draw.textbbox((0,0), pct_str, font=fb)
         draw.text((WIDTH - (pb[2]-pb[0]) - 60, 185), pct_str, font=fb, fill=color)
 
-        # Animated line
-        vis = max(2, int(prog * n))
-        pts = [(px(i), py(prices[i])) for i in range(vis)]
+        # Animated smooth line
+        vis = max(2, int(prog * n_smooth))
+        pts = [(px(i), py(prices_smooth[i])) for i in range(vis)]
         if len(pts) >= 2:
             draw.line(pts, fill=color, width=4)
 
@@ -198,19 +242,48 @@ def create_trending_video(used_tickers=None):
                 img = Image.alpha_composite(img.convert("RGBA"), glow).convert("RGB")
                 draw = ImageDraw.Draw(img)
             draw.ellipse((cx-7, cy-7, cx+7, cy+7), fill=WHITE)
-            curr_p = prices[min(int(prog*(n-1)), n-1)]
+            curr_p = prices_smooth[vis - 1]
             draw.text((cx+14, cy-28), _fmt_price(curr_p), font=fx, fill=WHITE)
 
         # Progress bar
         draw.rectangle([(0, HEIGHT-55), (WIDTH, HEIGHT)], fill=(20,20,20))
         draw.rectangle([(0, HEIGHT-55), (int(WIDTH*prog), HEIGHT)], fill=color)
 
-        # Hold: 30-day summary
+        # Hold: summary + Subscribe/Like butonları
         if hold:
-            p30 = (prices[-1] - prices[0]) / prices[0] * 100
-            s   = f"30-Day: {p30:+.1f}%   |   Today: {pct_str}"
-            sb  = draw.textbbox((0,0), s, font=fx)
-            draw.text(((WIDTH-(sb[2]-sb[0]))//2, HEIGHT-120), s, font=fx, fill=GRAY)
+            hold_prog = (fi - anim_f) / (FPS * HOLD_SECS)   # 0→1 during hold
+
+            # Chart label + today's change
+            if thirty_day_pct is not None:
+                s = f"{chart_label}  |  30-Day: {thirty_day_pct:+.1f}%  |  Today: {pct_str}"
+            else:
+                s = f"{chart_label}  |  Today: {pct_str}"
+            sb = draw.textbbox((0,0), s, font=fxs)
+            draw.text(((WIDTH-(sb[2]-sb[0]))//2, HEIGHT-315), s, font=fxs, fill=GRAY)
+
+            # Slide-in animasyonu (yukarıdan aşağı)
+            slide = min(1.0, hold_prog * 3)
+            panel_y = int(HEIGHT - 240 + (1 - slide) * 200)
+
+            # SUBSCRIBE butonu (kırmızı)
+            sub_x1, sub_y1 = 60, panel_y
+            sub_x2, sub_y2 = WIDTH - 60, panel_y + 90
+            draw.rounded_rectangle([(sub_x1, sub_y1), (sub_x2, sub_y2)],
+                                    radius=18, fill=(255, 30, 30))
+            sub_txt = "SUBSCRIBE"
+            stb = draw.textbbox((0,0), sub_txt, font=fs)
+            draw.text(((WIDTH-(stb[2]-stb[0]))//2, sub_y1+22),
+                      sub_txt, font=fs, fill=WHITE)
+
+            # LIKE butonu (koyu gri)
+            lk_x1, lk_y1 = 60, panel_y + 105
+            lk_x2, lk_y2 = WIDTH - 60, panel_y + 195
+            draw.rounded_rectangle([(lk_x1, lk_y1), (lk_x2, lk_y2)],
+                                    radius=18, fill=(40, 40, 40))
+            like_txt = f"LIKE  ({'+' if pct > 0 else ''}{pct:.1f}% today!)"
+            ltb = draw.textbbox((0,0), like_txt, font=fs)
+            draw.text(((WIDTH-(ltb[2]-ltb[0]))//2, lk_y1+22),
+                      like_txt, font=fs, fill=color)
 
         out.write(cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR))
 
