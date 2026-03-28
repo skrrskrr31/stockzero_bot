@@ -11,6 +11,17 @@ import cv2
 import numpy as np
 import yfinance as yf
 from PIL import Image, ImageDraw, ImageFont
+from scipy.interpolate import make_interp_spline
+
+def _smooth_series(series):
+    if len(series) < 4:
+        return series
+    x_raw  = np.linspace(0, 1, len(series))
+    x_fine = np.linspace(0, 1, len(series) * 10)
+    try:
+        return make_interp_spline(x_raw, series, k=3)(x_fine).tolist()
+    except Exception:
+        return series
 
 WIDTH, HEIGHT = 1080, 1920
 FPS    = 30
@@ -163,7 +174,7 @@ def create_top5_video():
         # Footer
         if hold:
             draw.rectangle([(60, HEIGHT-160), (WIDTH-60, HEIGHT-80)], fill=DARK)
-            foot = "Data: SEC 13F filing. Not financial advice."
+            foot = "Based on SEC 13F filings — updated quarterly."
             fb2  = draw.textbbox((0,0), foot, font=fxs)
             draw.text(((WIDTH-(fb2[2]-fb2[0]))//2, HEIGHT-145), foot, font=fxs, fill=GRAY)
 
@@ -265,7 +276,7 @@ def create_10yr_returns_video(used_tickers=None):
 
         # Footer
         if prog > 0.7:
-            foot = "NOT financial advice. Past performance not guaranteed."
+            foot = "Follow for daily investing breakdowns!"
             fb2  = draw.textbbox((0,0), foot, font=fxs)
             draw.text(((WIDTH-(fb2[2]-fb2[0]))//2, HEIGHT-120), foot, font=fxs, fill=GRAY)
 
@@ -299,8 +310,10 @@ def create_vs_sp500_video():
     if len(data) < 2:
         return None
 
-    n    = min(len(v) for v in data.values())
-    all_vals = [v for series in data.values() for v in series[:n]]
+    # Smooth her seriyi spline ile
+    data_smooth = {t: _smooth_series(v) for t, v in data.items()}
+    n    = min(len(v) for v in data_smooth.values())
+    all_vals = [v for series in data_smooth.values() for v in series[:n]]
     lo, hi   = min(all_vals), max(all_vals)
     rng      = hi - lo or 1
 
@@ -354,9 +367,9 @@ def create_vs_sp500_video():
             y0 = CHART_T_V + (CHART_B_V - CHART_T_V) * r / 5
             draw.line([(CHART_L_V, int(y0)), (CHART_R_V, int(y0))], fill=GRID_C, width=1)
 
-        # Animated lines
+        # Animated smooth lines
         vis = max(2, int(prog * n))
-        for ti, (ticker, series) in enumerate(data.items()):
+        for ti, (ticker, series) in enumerate(data_smooth.items()):
             col  = colors_map[ti]
             pts  = [(ix(i), vy(series[i])) for i in range(vis)]
             if len(pts) >= 2:
@@ -379,7 +392,7 @@ def create_vs_sp500_video():
             win_col = colors_map[0] if winner == "Berkshire" else colors_map[1]
             draw.text((80, panel_y + 20), f"Winner: {winner}", font=fs, fill=win_col)
             draw.text((80, panel_y + 85), f"Difference: {_fmt(diff)}", font=fx, fill=GRAY)
-            draw.text((80, panel_y +145), "NOT financial advice.", font=fxs, fill=GRAY)
+            draw.text((80, panel_y +145), "Follow for more investing breakdowns!", font=fxs, fill=GRAY)
 
         # Progress bar
         draw.rectangle([(0, HEIGHT-55), (WIDTH, HEIGHT)], fill=(20,20,20))
