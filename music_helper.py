@@ -1,31 +1,40 @@
 """
 music_helper.py - Royalty-free background music for stock videos.
-
-Source: Pixabay Music API (free, no attribution needed for YouTube)
-  → https://pixabay.com/service/about/api/
-  → Sign up free → API key → add as GitHub secret PIXABAY_KEY
-
-Falls back to local background.mp3 if no key / API fails.
+Source: SoundCloud search via yt-dlp (NCS / copyright-free)
+Falls back to local background.mp3 if download fails.
 """
 
 import os
 import random
 import subprocess
-import requests
 
-CACHE_DIR   = "music_cache"
-FALLBACK    = "background.mp3"
-API_URL     = "https://pixabay.com/api/music/"
+FALLBACK = "background.mp3"
+TMP_MUSIC = "_bg_music.mp3"
 
-# mood → Pixabay search terms (tried in order until one returns results)
+# mood → SoundCloud search queries
 MOOD_QUERIES = {
-    "upbeat":    ["upbeat corporate",  "energetic background", "motivational"],
-    "dramatic":  ["dramatic cinematic","tense thriller",       "dark tension"],
-    "calm":      ["calm background",   "relaxing piano",       "soft ambient"],
-    "corporate": ["corporate background","professional piano", "inspiring"],
+    "upbeat":    ["NCS phonk aggressive no copyright",
+                  "NCS release trap beat energetic no copyright",
+                  "NCS electronic upbeat 2024 no copyright",
+                  "phonk drift no copyright free use NCS",
+                  "NCS gaming music energetic no copyright"],
+    "dramatic":  ["NCS dark phonk no copyright free",
+                  "NCS cinematic dark instrumental no copyright",
+                  "NCS aggressive phonk 2024 no copyright",
+                  "NCS dark electronic no copyright free use",
+                  "dark phonk no copyright NCS release"],
+    "calm":      ["lofi hip hop no copyright NCS chill",
+                  "NCS lofi chill beats no copyright 2024",
+                  "chillhop no copyright free use beats",
+                  "NCS ambient chill no copyright instrumental",
+                  "lofi study beats NCS no copyright free"],
+    "corporate": ["NCS motivational no copyright inspiring",
+                  "NCS future bass uplifting no copyright",
+                  "NCS corporate background music no copyright",
+                  "NCS electronic motivational 2024 free",
+                  "uplifting background music NCS no copyright"],
 }
 
-# Video type → mood
 VIDEO_MOODS = {
     "trending_gainer": "upbeat",
     "trending_loser":  "dramatic",
@@ -35,87 +44,45 @@ VIDEO_MOODS = {
 }
 
 
-def _ensure_cache():
-    os.makedirs(CACHE_DIR, exist_ok=True)
-
-
-def _pixabay_search(key: str, query: str) -> list:
-    """Return list of (audio_url, title) from Pixabay music API."""
+def _ffmpeg_bin() -> str:
     try:
-        r = requests.get(
-            API_URL,
-            params={
-                "key":          key,
-                "q":            query,
-                "min_duration": 60,
-                "per_page":     20,
-            },
-            timeout=10,
-        )
-        if r.status_code != 200:
-            return []
-        data = r.json()
-        hits = data.get("hits", [])
-        results = []
-        for h in hits:
-            # Pixabay music hit structure
-            audio = h.get("audio", {})
-            url   = audio.get("mp3", {}).get("url", "") if isinstance(audio, dict) else ""
-            if not url:
-                # Alternative path
-                url = h.get("download", {}).get("url", "")
-            if url:
-                results.append((url, h.get("title", "track")))
-        return results
-    except Exception as e:
-        print(f"  Pixabay API error: {e}")
-        return []
-
-
-def _download(url: str, dest: str) -> bool:
-    """Download URL to dest. Returns True on success."""
-    try:
-        r = requests.get(url, timeout=30, stream=True)
-        if r.status_code == 200:
-            with open(dest, "wb") as f:
-                for chunk in r.iter_content(8192):
-                    f.write(chunk)
-            return True
-    except Exception as e:
-        print(f"  Download error: {e}")
-    return False
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
 
 
 def get_music(video_type: str = "dca") -> str:
-    """
-    Return path to a suitable background music MP3.
-    Downloads from Pixabay if PIXABAY_KEY is set, otherwise uses fallback.
-    """
-    key  = os.environ.get("PIXABAY_KEY", "").strip()
-    mood = VIDEO_MOODS.get(video_type, "calm")
+    """Download a random NCS track from SoundCloud, return local path."""
+    mood    = VIDEO_MOODS.get(video_type, "calm")
+    queries = MOOD_QUERIES.get(mood, ["NCS instrumental no copyright"])
+    query   = f"ytsearch1:{random.choice(queries)}"
 
-    if key:
-        _ensure_cache()
-        queries = MOOD_QUERIES.get(mood, ["background music"])
-        random.shuffle(queries)
+    # Temizle
+    for f in [TMP_MUSIC, TMP_MUSIC.replace(".mp3", "")]:
+        if os.path.exists(f):
+            try: os.remove(f)
+            except: pass
 
-        for q in queries:
-            hits = _pixabay_search(key, q)
-            if not hits:
-                continue
-            random.shuffle(hits)
-            for url, title in hits[:5]:
-                safe  = "".join(c if c.isalnum() else "_" for c in title)[:40]
-                dest  = os.path.join(CACHE_DIR, f"{safe}.mp3")
-                if os.path.exists(dest) and os.path.getsize(dest) > 10_000:
-                    print(f"  Music (cached): {title} [{mood}]")
-                    return dest
-                print(f"  Downloading music: {title}")
-                if _download(url, dest):
-                    print(f"  Music ready: {title} [{mood}]")
-                    return dest
+    try:
+        import yt_dlp
+        ydl_opts = {
+            "format":          "bestaudio/best",
+            "outtmpl":         TMP_MUSIC.replace(".mp3", ""),
+            "postprocessors":  [{"key": "FFmpegExtractAudio", "preferredcodec": "mp3"}],
+            "ffmpeg_location": _ffmpeg_bin(),
+            "quiet":           True,
+            "no_warnings":     True,
+        }
+        print(f"  Downloading music ({mood})...")
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([query])
+        if os.path.exists(TMP_MUSIC):
+            print("  Music ready.")
+            return TMP_MUSIC
+    except Exception as e:
+        print(f"  Music download error: {e}")
 
-    # Fallback: local background.mp3
     if os.path.exists(FALLBACK):
         print(f"  Music: fallback {FALLBACK}")
         return FALLBACK
@@ -125,48 +92,64 @@ def get_music(video_type: str = "dca") -> str:
 
 
 def mix_music_into_video(video_path: str, music_path: str,
-                          out_path: str = None, volume: float = 0.18) -> str:
+                          out_path: str = None, volume: float = 0.08) -> str:
     """
-    Mix background music into a silent video using ffmpeg.
-    Music is looped if shorter than the video. Volume is set to `volume` (0–1).
-    Returns path to output file (replaces video_path if out_path is None).
+    Mix background music into video using ffmpeg.
+    If video has original audio, both are mixed. Otherwise music only.
     """
+    video_path = os.path.abspath(video_path)
+    music_path = os.path.abspath(music_path)
     if out_path is None:
         out_path = video_path.replace(".mp4", "_music.mp4")
+    out_path = os.path.abspath(out_path)
+
+    has_orig = _has_audio(video_path)
+    if has_orig:
+        fc = (f"[1:a]volume={volume}[bg];"
+              f"[0:a][bg]amix=inputs=2:duration=first:dropout_transition=0[out]")
+    else:
+        fc = f"[1:a]volume={volume}[out]"
 
     cmd = [
-        "ffmpeg", "-y",
+        _ffmpeg_bin(), "-y",
         "-i", video_path,
         "-stream_loop", "-1", "-i", music_path,
-        "-filter_complex",
-            f"[1:a]volume={volume}[bg];"
-            f"[bg]atrim=0:{_video_duration(video_path)}[bgcut]",
+        "-filter_complex", fc,
         "-map", "0:v",
-        "-map", "[bgcut]",
-        "-c:v", "libx264", "-crf", "22", "-preset", "fast",
+        "-map", "[out]",
+        "-c:v", "copy",
         "-c:a", "aac", "-b:a", "128k",
         "-shortest",
         out_path,
     ]
     result = subprocess.run(cmd, capture_output=True)
     if result.returncode == 0 and os.path.exists(out_path):
-        if out_path != video_path:
-            try:
-                os.remove(video_path)
-            except Exception:
-                pass
+        try: os.remove(video_path)
+        except: pass
         return out_path
     else:
-        print(f"  ffmpeg music mix error: {result.stderr[-300:].decode(errors='ignore')}")
-        # Fallback: compress without music
+        print(f"  ffmpeg error: {result.stderr[-300:].decode(errors='ignore')}")
         return _compress_only(video_path, out_path)
+
+
+def _has_audio(path: str) -> bool:
+    """Video'da ses stream'i var mı?"""
+    try:
+        r = subprocess.run(
+            [_ffmpeg_bin(), "-i", path],
+            capture_output=True
+        )
+        return "Audio:" in r.stderr.decode(errors="ignore")
+    except Exception:
+        return False
 
 
 def _video_duration(path: str) -> float:
     """Get video duration in seconds via ffprobe."""
     try:
+        ffprobe = _ffmpeg_bin().replace("ffmpeg", "ffprobe")
         r = subprocess.run(
-            ["ffprobe", "-v", "quiet", "-print_format", "json",
+            [ffprobe, "-v", "quiet", "-print_format", "json",
              "-show_format", path],
             capture_output=True,
         )
@@ -180,7 +163,7 @@ def _video_duration(path: str) -> float:
 def _compress_only(src: str, dst: str) -> str:
     """Compress video without audio."""
     r = subprocess.run(
-        ["ffmpeg", "-y", "-i", src,
+        [_ffmpeg_bin(), "-y", "-i", src,
          "-vcodec", "libx264", "-crf", "22", "-preset", "fast",
          "-an", dst],
         capture_output=True,
