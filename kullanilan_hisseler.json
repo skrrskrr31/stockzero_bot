@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 130,
+  "total": 131,
   "trending": [
     "SOFI",
     "PANW",
@@ -97,6 +97,7 @@
   ],
   "loss": [
     "LCID",
-    "RIVN"
+    "RIVN",
+    "HOOD"
   ]
 }
