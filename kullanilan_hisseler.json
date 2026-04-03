@@ -84,14 +84,15 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 144,
+  "total": 145,
   "trending": [
     "SOFI",
     "PANW",
     "MSTR",
     "RBLX",
     "ARKK",
-    "NET"
+    "NET",
+    "NFLX"
   ],
   "dca": [
     "SPY",
