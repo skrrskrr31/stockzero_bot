@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 156,
+  "total": 157,
   "trending": [
     "SOFI",
     "PANW",
@@ -94,7 +94,8 @@
     "NET",
     "NFLX",
     "HOOD",
-    "AMZN"
+    "AMZN",
+    "SMCI"
   ],
   "dca": [
     "SPY",
