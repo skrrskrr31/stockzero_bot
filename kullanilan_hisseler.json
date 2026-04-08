@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 168,
+  "total": 169,
   "trending": [
     "SOFI",
     "PANW",
@@ -97,7 +97,8 @@
     "AMZN",
     "SMCI",
     "NIO",
-    "UBER"
+    "UBER",
+    "DDOG"
   ],
   "dca": [
     "SPY",
