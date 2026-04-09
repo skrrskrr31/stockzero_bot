@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 169,
+  "total": 170,
   "trending": [
     "SOFI",
     "PANW",
@@ -112,7 +112,8 @@
     "META",
     "PLTR",
     "UBER",
-    "ABBV"
+    "ABBV",
+    "HD"
   ],
   "loss": [
     "LCID",
