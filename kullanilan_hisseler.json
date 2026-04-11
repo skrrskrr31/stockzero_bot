@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 177,
+  "total": 178,
   "trending": [
     "SOFI",
     "PANW",
@@ -116,7 +116,8 @@
     "UBER",
     "ABBV",
     "HD",
-    "COST"
+    "COST",
+    "MA"
   ],
   "loss": [
     "LCID",
