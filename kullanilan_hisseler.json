@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 184,
+  "total": 185,
   "trending": [
     "SOFI",
     "PANW",
@@ -101,7 +101,8 @@
     "DDOG",
     "ABNB",
     "META",
-    "MSFT"
+    "MSFT",
+    "V"
   ],
   "dca": [
     "SPY",
