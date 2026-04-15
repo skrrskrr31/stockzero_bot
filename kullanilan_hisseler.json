@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 189,
+  "total": 190,
   "trending": [
     "SOFI",
     "PANW",
@@ -122,7 +122,8 @@
     "COST",
     "MA",
     "AAPL",
-    "AVGO"
+    "AVGO",
+    "MSFT"
   ],
   "loss": [
     "LCID",
