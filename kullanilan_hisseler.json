@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 208,
+  "total": 209,
   "trending": [
     "SOFI",
     "PANW",
@@ -107,7 +107,8 @@
     "JPM",
     "PINS",
     "GS",
-    "PLTR"
+    "PLTR",
+    "TGT"
   ],
   "dca": [
     "SPY",
