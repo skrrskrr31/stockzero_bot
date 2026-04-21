@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 210,
+  "total": 211,
   "trending": [
     "SOFI",
     "PANW",
@@ -136,7 +136,6 @@
     "AMD"
   ],
   "loss": [
-    "HOOD",
     "ENRN",
     "SNAP",
     "PTON",
@@ -155,6 +154,7 @@
     "ZM",
     "ZM",
     "ZM",
-    "ZM"
+    "ZM",
+    "LCID"
   ]
 }
