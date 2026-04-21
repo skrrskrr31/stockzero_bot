@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 213,
+  "total": 214,
   "trending": [
     "SOFI",
     "PANW",
@@ -134,7 +134,8 @@
     "V",
     "JPM",
     "DIS",
-    "AMD"
+    "AMD",
+    "NVDA"
   ],
   "loss": [
     "ENRN",
