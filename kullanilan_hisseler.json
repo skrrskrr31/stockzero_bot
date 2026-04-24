@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 222,
+  "total": 223,
   "trending": [
     "SOFI",
     "PANW",
@@ -142,7 +142,6 @@
     "TSLA"
   ],
   "loss": [
-    "PTON",
     "LEHM",
     "SPCE",
     "AMC",
@@ -161,6 +160,7 @@
     "ZM",
     "LCID",
     "HOOD",
-    "ZM"
+    "ZM",
+    "RIVN"
   ]
 }
