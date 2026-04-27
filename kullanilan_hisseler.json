@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 236,
+  "total": 237,
   "trending": [
     "SOFI",
     "PANW",
@@ -114,7 +114,8 @@
     "HD",
     "INTC",
     "ARM",
-    "AMD"
+    "AMD",
+    "MA"
   ],
   "dca": [
     "SPY",
