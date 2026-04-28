@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 240,
+  "total": 241,
   "trending": [
-    "SOFI",
     "PANW",
     "MSTR",
     "RBLX",
@@ -115,7 +114,8 @@
     "INTC",
     "ARM",
     "AMD",
-    "MA"
+    "MA",
+    "MRNA"
   ],
   "dca": [
     "SPY",
