@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 242,
+  "total": 243,
   "trending": [
     "PANW",
     "MSTR",
@@ -150,7 +150,6 @@
     "AMD"
   ],
   "loss": [
-    "GME",
     "BBBY",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "PTON",
     "SNAP",
     "SPCE",
-    "AMC"
+    "AMC",
+    "ZM"
   ]
 }
