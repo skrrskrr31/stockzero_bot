@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 245,
+  "total": 246,
   "trending": [
     "MSTR",
     "RBLX",
@@ -118,7 +118,6 @@
     "SOFI"
   ],
   "dca": [
-    "GOOGL",
     "LLY",
     "PFE",
     "SHOP",
@@ -147,7 +146,8 @@
     "AMZN",
     "QCOM",
     "WMT",
-    "AMD"
+    "AMD",
+    "SPY"
   ],
   "loss": [
     "BBBY",
