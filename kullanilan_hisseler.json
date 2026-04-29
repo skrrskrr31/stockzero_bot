@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 244,
+  "total": 245,
   "trending": [
-    "PANW",
     "MSTR",
     "RBLX",
     "ARKK",
@@ -115,7 +114,8 @@
     "ARM",
     "AMD",
     "MA",
-    "MRNA"
+    "MRNA",
+    "SOFI"
   ],
   "dca": [
     "GOOGL",
