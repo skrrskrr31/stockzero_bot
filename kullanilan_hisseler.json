@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 246,
+  "total": 247,
   "trending": [
     "MSTR",
     "RBLX",
@@ -150,7 +150,6 @@
     "SPY"
   ],
   "loss": [
-    "BBBY",
     "ZM",
     "ZM",
     "SIVB",
@@ -169,6 +168,7 @@
     "SNAP",
     "SPCE",
     "AMC",
-    "ZM"
+    "ZM",
+    "GME"
   ]
 }
