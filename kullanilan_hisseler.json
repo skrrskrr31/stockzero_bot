@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 248,
+  "total": 249,
   "trending": [
-    "MSTR",
     "RBLX",
     "ARKK",
     "NET",
@@ -115,7 +114,8 @@
     "AMD",
     "MA",
     "MRNA",
-    "SOFI"
+    "SOFI",
+    "QCOM"
   ],
   "dca": [
     "LLY",
