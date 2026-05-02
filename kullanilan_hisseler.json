@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 257,
+  "total": 258,
   "trending": [
     "NET",
     "NFLX",
@@ -118,7 +118,6 @@
     "RBLX"
   ],
   "dca": [
-    "SHOP",
     "QQQ",
     "DDOG",
     "NKE",
@@ -147,7 +146,8 @@
     "AMD",
     "SPY",
     "GOOGL",
-    "LLY"
+    "LLY",
+    "PFE"
   ],
   "loss": [
     "SIVB",
