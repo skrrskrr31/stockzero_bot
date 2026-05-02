@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 256,
+  "total": 257,
   "trending": [
-    "ARKK",
     "NET",
     "NFLX",
     "HOOD",
@@ -115,7 +114,8 @@
     "MRNA",
     "SOFI",
     "QCOM",
-    "SNOW"
+    "SNOW",
+    "RBLX"
   ],
   "dca": [
     "SHOP",
