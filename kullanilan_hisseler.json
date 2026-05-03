@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 261,
+  "total": 262,
   "trending": [
     "NFLX",
     "HOOD",
@@ -118,7 +118,6 @@
     "AVGO"
   ],
   "dca": [
-    "QQQ",
     "DDOG",
     "NKE",
     "META",
@@ -147,7 +146,8 @@
     "SPY",
     "GOOGL",
     "LLY",
-    "PFE"
+    "PFE",
+    "SHOP"
   ],
   "loss": [
     "ARKK",
