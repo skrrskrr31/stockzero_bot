@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 260,
+  "total": 261,
   "trending": [
-    "NET",
     "NFLX",
     "HOOD",
     "AMZN",
@@ -115,7 +114,8 @@
     "SOFI",
     "QCOM",
     "SNOW",
-    "RBLX"
+    "RBLX",
+    "AVGO"
   ],
   "dca": [
     "QQQ",
