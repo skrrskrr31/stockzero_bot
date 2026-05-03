@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 262,
+  "total": 263,
   "trending": [
     "NFLX",
     "HOOD",
@@ -150,7 +150,6 @@
     "SHOP"
   ],
   "loss": [
-    "ARKK",
     "ZM",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "GME",
     "BBBY",
     "LEHM",
-    "ENRN"
+    "ENRN",
+    "SIVB"
   ]
 }
