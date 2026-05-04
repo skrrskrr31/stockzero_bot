@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 265,
+  "total": 266,
   "trending": [
     "HOOD",
     "AMZN",
@@ -118,7 +118,6 @@
     "PYPL"
   ],
   "dca": [
-    "DDOG",
     "NKE",
     "META",
     "PLTR",
@@ -147,7 +146,8 @@
     "GOOGL",
     "LLY",
     "PFE",
-    "SHOP"
+    "SHOP",
+    "QQQ"
   ],
   "loss": [
     "ZM",
