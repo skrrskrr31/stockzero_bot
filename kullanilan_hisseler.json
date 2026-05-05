@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 268,
+  "total": 269,
   "trending": [
-    "HOOD",
     "AMZN",
     "SMCI",
     "NIO",
@@ -115,7 +114,8 @@
     "SNOW",
     "RBLX",
     "AVGO",
-    "PYPL"
+    "PYPL",
+    "CVX"
   ],
   "dca": [
     "NKE",
