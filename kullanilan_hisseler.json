@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 270,
+  "total": 271,
   "trending": [
     "AMZN",
     "SMCI",
@@ -154,7 +154,6 @@
     "ZM",
     "ZM",
     "ZM",
-    "ZM",
     "LCID",
     "HOOD",
     "ZM",
@@ -169,6 +168,7 @@
     "LEHM",
     "ENRN",
     "SIVB",
-    "ZM"
+    "ZM",
+    "ARKK"
   ]
 }
