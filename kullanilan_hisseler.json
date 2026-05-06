@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 272,
+  "total": 273,
   "trending": [
-    "AMZN",
     "SMCI",
     "NIO",
     "UBER",
@@ -115,7 +114,8 @@
     "RBLX",
     "AVGO",
     "PYPL",
-    "CVX"
+    "CVX",
+    "AAPL"
   ],
   "dca": [
     "META",
