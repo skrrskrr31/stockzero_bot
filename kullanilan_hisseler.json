@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 273,
+  "total": 274,
   "trending": [
     "SMCI",
     "NIO",
@@ -118,7 +118,6 @@
     "AAPL"
   ],
   "dca": [
-    "META",
     "PLTR",
     "UBER",
     "ABBV",
@@ -147,7 +146,8 @@
     "PFE",
     "SHOP",
     "QQQ",
-    "DDOG"
+    "DDOG",
+    "NKE"
   ],
   "loss": [
     "ZM",
