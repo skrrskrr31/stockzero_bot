@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 277,
+  "total": 278,
   "trending": [
     "NIO",
     "UBER",
@@ -118,7 +118,6 @@
     "HOOD"
   ],
   "dca": [
-    "PLTR",
     "UBER",
     "ABBV",
     "HD",
@@ -147,7 +146,8 @@
     "SHOP",
     "QQQ",
     "DDOG",
-    "NKE"
+    "NKE",
+    "META"
   ],
   "loss": [
     "ZM",
