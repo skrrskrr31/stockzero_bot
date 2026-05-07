@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 276,
+  "total": 277,
   "trending": [
-    "SMCI",
     "NIO",
     "UBER",
     "DDOG",
@@ -115,7 +114,8 @@
     "AVGO",
     "PYPL",
     "CVX",
-    "AAPL"
+    "AAPL",
+    "HOOD"
   ],
   "dca": [
     "PLTR",
