@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 278,
+  "total": 279,
   "trending": [
     "NIO",
     "UBER",
@@ -152,7 +152,6 @@
   "loss": [
     "ZM",
     "ZM",
-    "ZM",
     "LCID",
     "HOOD",
     "ZM",
@@ -169,6 +168,7 @@
     "SIVB",
     "ZM",
     "ARKK",
+    "ZM",
     "ZM"
   ]
 }
