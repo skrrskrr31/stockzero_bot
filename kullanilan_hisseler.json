@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 284,
+  "total": 285,
   "trending": [
-    "UBER",
     "DDOG",
     "ABNB",
     "META",
@@ -115,7 +114,8 @@
     "CVX",
     "AAPL",
     "HOOD",
-    "TSLA"
+    "TSLA",
+    "NET"
   ],
   "dca": [
     "ABBV",
