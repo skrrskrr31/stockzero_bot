@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 289,
+  "total": 290,
   "trending": [
     "ABNB",
     "META",
@@ -118,7 +118,6 @@
     "NVDA"
   ],
   "dca": [
-    "HD",
     "COST",
     "MA",
     "AAPL",
@@ -147,7 +146,8 @@
     "NKE",
     "META",
     "PLTR",
-    "UBER"
+    "UBER",
+    "ABBV"
   ],
   "loss": [
     "LCID",
