@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 290,
+  "total": 291,
   "trending": [
     "ABNB",
     "META",
@@ -150,7 +150,6 @@
     "ABBV"
   ],
   "loss": [
-    "LCID",
     "HOOD",
     "ZM",
     "RIVN",
@@ -166,6 +165,7 @@
     "SIVB",
     "ZM",
     "ARKK",
+    "ZM",
     "ZM",
     "ZM",
     "ZM",
