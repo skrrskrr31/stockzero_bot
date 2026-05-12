@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 296,
+  "total": 297,
   "trending": [
-    "META",
     "MSFT",
     "V",
     "DASH",
@@ -115,7 +114,8 @@
     "TSLA",
     "NET",
     "NVDA",
-    "COST"
+    "COST",
+    "SNAP"
   ],
   "dca": [
     "MA",
