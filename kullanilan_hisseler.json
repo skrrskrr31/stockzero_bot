@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 301,
+  "total": 302,
   "trending": [
     "V",
     "DASH",
@@ -118,7 +118,6 @@
     "DDOG"
   ],
   "dca": [
-    "AAPL",
     "AVGO",
     "MSFT",
     "NFLX",
@@ -147,7 +146,8 @@
     "UBER",
     "ABBV",
     "HD",
-    "COST"
+    "COST",
+    "MA"
   ],
   "loss": [
     "RIVN",
