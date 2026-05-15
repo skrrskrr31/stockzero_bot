@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 304,
+  "total": 305,
   "trending": [
-    "V",
     "DASH",
     "JPM",
     "PINS",
@@ -115,7 +114,8 @@
     "NVDA",
     "COST",
     "SNAP",
-    "DDOG"
+    "DDOG",
+    "NKE"
   ],
   "dca": [
     "AVGO",
