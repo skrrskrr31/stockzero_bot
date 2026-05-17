@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 312,
+  "total": 313,
   "trending": [
-    "JPM",
     "PINS",
     "GS",
     "PLTR",
@@ -115,7 +114,8 @@
     "SNAP",
     "DDOG",
     "NKE",
-    "NFLX"
+    "NFLX",
+    "RIVN"
   ],
   "dca": [
     "NFLX",
