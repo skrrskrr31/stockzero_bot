@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 313,
+  "total": 314,
   "trending": [
     "PINS",
     "GS",
@@ -118,7 +118,6 @@
     "RIVN"
   ],
   "dca": [
-    "NFLX",
     "V",
     "JPM",
     "DIS",
@@ -147,7 +146,8 @@
     "COST",
     "MA",
     "AAPL",
-    "AVGO"
+    "AVGO",
+    "MSFT"
   ],
   "loss": [
     "SPCE",
