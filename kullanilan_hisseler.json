@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 314,
+  "total": 315,
   "trending": [
     "PINS",
     "GS",
@@ -150,7 +150,6 @@
     "MSFT"
   ],
   "loss": [
-    "SPCE",
     "AMC",
     "ZM",
     "GME",
@@ -169,6 +168,7 @@
     "COIN",
     "ZM",
     "RIVN",
-    "HOOD"
+    "HOOD",
+    "PTON"
   ]
 }
