@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 320,
+  "total": 321,
   "trending": [
-    "GS",
     "PLTR",
     "TGT",
     "SHOP",
@@ -115,7 +114,8 @@
     "NKE",
     "NFLX",
     "RIVN",
-    "GM"
+    "GM",
+    "CRWD"
   ],
   "dca": [
     "JPM",
