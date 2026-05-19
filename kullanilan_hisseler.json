@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 322,
+  "total": 323,
   "trending": [
     "PLTR",
     "TGT",
@@ -150,7 +150,6 @@
     "V"
   ],
   "loss": [
-    "ZM",
     "GME",
     "BBBY",
     "LEHM",
@@ -169,6 +168,7 @@
     "RIVN",
     "HOOD",
     "PTON",
-    "SNAP"
+    "SNAP",
+    "SPCE"
   ]
 }
