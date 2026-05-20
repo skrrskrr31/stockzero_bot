@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 326,
+  "total": 327,
   "trending": [
     "TGT",
     "SHOP",
@@ -150,7 +150,6 @@
     "JPM"
   ],
   "loss": [
-    "GME",
     "BBBY",
     "LEHM",
     "ENRN",
@@ -169,6 +168,7 @@
     "HOOD",
     "PTON",
     "SNAP",
-    "SPCE"
+    "SPCE",
+    "AMC"
   ]
 }
