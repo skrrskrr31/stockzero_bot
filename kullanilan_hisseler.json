@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 329,
+  "total": 330,
   "trending": [
     "SHOP",
     "ZS",
@@ -118,7 +118,6 @@
     "PLTR"
   ],
   "dca": [
-    "AMD",
     "NVDA",
     "CRWD",
     "TSLA",
@@ -147,7 +146,8 @@
     "MSFT",
     "NFLX",
     "V",
-    "JPM"
+    "JPM",
+    "DIS"
   ],
   "loss": [
     "BBBY",
