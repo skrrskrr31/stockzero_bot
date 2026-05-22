@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 336,
+  "total": 337,
   "trending": [
-    "ZS",
     "HD",
     "INTC",
     "ARM",
@@ -115,7 +114,8 @@
     "CRWD",
     "ARKK",
     "PLTR",
-    "WMT"
+    "WMT",
+    "SMCI"
   ],
   "dca": [
     "CRWD",
