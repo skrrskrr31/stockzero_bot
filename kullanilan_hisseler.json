@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 333,
+  "total": 334,
   "trending": [
     "ZS",
     "HD",
@@ -118,7 +118,6 @@
     "WMT"
   ],
   "dca": [
-    "NVDA",
     "CRWD",
     "TSLA",
     "XOM",
@@ -147,7 +146,8 @@
     "NFLX",
     "V",
     "JPM",
-    "DIS"
+    "DIS",
+    "MSFT"
   ],
   "loss": [
     "LEHM",
