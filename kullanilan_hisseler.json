@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 338,
+  "total": 339,
   "trending": [
     "HD",
     "INTC",
@@ -150,7 +150,6 @@
     "NVDA"
   ],
   "loss": [
-    "ENRN",
     "SIVB",
     "ZM",
     "ARKK",
@@ -169,6 +168,7 @@
     "SPCE",
     "AMC",
     "ZM",
-    "BBBY"
+    "BBBY",
+    "LEHM"
   ]
 }
