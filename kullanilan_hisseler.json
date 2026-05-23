@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 340,
+  "total": 341,
   "trending": [
-    "HD",
     "INTC",
     "ARM",
     "AMD",
@@ -115,7 +114,8 @@
     "ARKK",
     "PLTR",
     "WMT",
-    "SMCI"
+    "SMCI",
+    "NIO"
   ],
   "dca": [
     "TSLA",
