@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 344,
+  "total": 345,
   "trending": [
-    "INTC",
     "ARM",
     "AMD",
     "MA",
@@ -115,7 +114,8 @@
     "PLTR",
     "WMT",
     "SMCI",
-    "NIO"
+    "NIO",
+    "AMZN"
   ],
   "dca": [
     "XOM",
