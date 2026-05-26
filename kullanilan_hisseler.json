@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 348,
+  "total": 349,
   "trending": [
-    "ARM",
     "AMD",
     "MA",
     "MRNA",
@@ -115,7 +114,8 @@
     "WMT",
     "SMCI",
     "NIO",
-    "AMZN"
+    "AMZN",
+    "MDB"
   ],
   "dca": [
     "AMZN",
