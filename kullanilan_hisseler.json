@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 350,
+  "total": 351,
   "trending": [
     "AMD",
     "MA",
@@ -150,7 +150,6 @@
     "XOM"
   ],
   "loss": [
-    "ARKK",
     "ZM",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "BBBY",
     "LEHM",
     "ENRN",
-    "SIVB"
+    "SIVB",
+    "ZM"
   ]
 }
