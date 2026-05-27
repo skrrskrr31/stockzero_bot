@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 353,
+  "total": 354,
   "trending": [
     "MA",
     "MRNA",
@@ -118,7 +118,6 @@
     "ZS"
   ],
   "dca": [
-    "QCOM",
     "WMT",
     "AMD",
     "SPY",
@@ -147,7 +146,8 @@
     "NVDA",
     "CRWD",
     "TSLA",
-    "XOM"
+    "XOM",
+    "AMZN"
   ],
   "loss": [
     "ZM",
