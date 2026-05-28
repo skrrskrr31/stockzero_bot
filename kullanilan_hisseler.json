@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 356,
+  "total": 357,
   "trending": [
-    "MA",
     "MRNA",
     "SOFI",
     "QCOM",
@@ -115,7 +114,8 @@
     "NIO",
     "AMZN",
     "MDB",
-    "ZS"
+    "ZS",
+    "MU"
   ],
   "dca": [
     "WMT",
