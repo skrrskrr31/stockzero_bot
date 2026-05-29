@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 360,
+  "total": 361,
   "trending": [
-    "MRNA",
     "SOFI",
     "QCOM",
     "SNOW",
@@ -115,7 +114,8 @@
     "AMZN",
     "MDB",
     "ZS",
-    "MU"
+    "MU",
+    "OXY"
   ],
   "dca": [
     "AMD",
