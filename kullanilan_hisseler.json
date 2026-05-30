@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 365,
+  "total": 366,
   "trending": [
     "QCOM",
     "SNOW",
@@ -118,7 +118,6 @@
     "F"
   ],
   "dca": [
-    "SPY",
     "GOOGL",
     "LLY",
     "PFE",
@@ -147,7 +146,8 @@
     "XOM",
     "AMZN",
     "QCOM",
-    "WMT"
+    "WMT",
+    "AMD"
   ],
   "loss": [
     "ZM",
