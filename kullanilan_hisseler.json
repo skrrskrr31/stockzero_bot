@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 364,
+  "total": 365,
   "trending": [
-    "SOFI",
     "QCOM",
     "SNOW",
     "RBLX",
@@ -115,7 +114,8 @@
     "MDB",
     "ZS",
     "MU",
-    "OXY"
+    "OXY",
+    "F"
   ],
   "dca": [
     "SPY",
