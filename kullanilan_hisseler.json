@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 368,
+  "total": 369,
   "trending": [
-    "QCOM",
     "SNOW",
     "RBLX",
     "AVGO",
@@ -115,7 +114,8 @@
     "ZS",
     "MU",
     "OXY",
-    "F"
+    "F",
+    "SPY"
   ],
   "dca": [
     "GOOGL",
