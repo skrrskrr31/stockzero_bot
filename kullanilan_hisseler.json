@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 366,
+  "total": 367,
   "trending": [
     "QCOM",
     "SNOW",
@@ -151,7 +151,6 @@
   ],
   "loss": [
     "ZM",
-    "ZM",
     "LCID",
     "COIN",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "GME",
+    "ZM",
     "ZM"
   ]
 }
