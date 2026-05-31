@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 369,
+  "total": 370,
   "trending": [
     "SNOW",
     "RBLX",
@@ -118,7 +118,6 @@
     "SPY"
   ],
   "dca": [
-    "GOOGL",
     "LLY",
     "PFE",
     "SHOP",
@@ -147,7 +146,8 @@
     "AMZN",
     "QCOM",
     "WMT",
-    "AMD"
+    "AMD",
+    "SPY"
   ],
   "loss": [
     "ZM",
