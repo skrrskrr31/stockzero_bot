@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 372,
+  "total": 373,
   "trending": [
-    "SNOW",
     "RBLX",
     "AVGO",
     "PYPL",
@@ -115,7 +114,8 @@
     "MU",
     "OXY",
     "F",
-    "SPY"
+    "SPY",
+    "MRNA"
   ],
   "dca": [
     "LLY",
