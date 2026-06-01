@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 373,
+  "total": 374,
   "trending": [
     "RBLX",
     "AVGO",
@@ -118,7 +118,6 @@
     "MRNA"
   ],
   "dca": [
-    "LLY",
     "PFE",
     "SHOP",
     "QQQ",
@@ -147,7 +146,8 @@
     "QCOM",
     "WMT",
     "AMD",
-    "SPY"
+    "SPY",
+    "GOOGL"
   ],
   "loss": [
     "LCID",
