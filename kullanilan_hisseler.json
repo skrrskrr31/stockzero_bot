@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 376,
+  "total": 377,
   "trending": [
-    "RBLX",
     "AVGO",
     "PYPL",
     "CVX",
@@ -115,7 +114,8 @@
     "OXY",
     "F",
     "SPY",
-    "MRNA"
+    "MRNA",
+    "ABBV"
   ],
   "dca": [
     "PFE",
