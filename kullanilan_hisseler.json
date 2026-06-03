@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 380,
+  "total": 381,
   "trending": [
-    "AVGO",
     "PYPL",
     "CVX",
     "AAPL",
@@ -115,7 +114,8 @@
     "F",
     "SPY",
     "MRNA",
-    "ABBV"
+    "ABBV",
+    "IWM"
   ],
   "dca": [
     "SHOP",
