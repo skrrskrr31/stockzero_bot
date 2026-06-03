@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 378,
+  "total": 379,
   "trending": [
     "AVGO",
     "PYPL",
@@ -150,7 +150,6 @@
     "LLY"
   ],
   "loss": [
-    "COIN",
     "ZM",
     "RIVN",
     "HOOD",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "ARKK",
+    "ZM",
     "ZM"
   ]
 }
