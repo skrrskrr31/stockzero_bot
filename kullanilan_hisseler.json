@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 384,
+  "total": 385,
   "trending": [
-    "PYPL",
     "CVX",
     "AAPL",
     "HOOD",
@@ -115,7 +114,8 @@
     "SPY",
     "MRNA",
     "ABBV",
-    "IWM"
+    "IWM",
+    "PINS"
   ],
   "dca": [
     "QQQ",
