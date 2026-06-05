@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 388,
+  "total": 389,
   "trending": [
-    "CVX",
     "AAPL",
     "HOOD",
     "TSLA",
@@ -115,7 +114,8 @@
     "MRNA",
     "ABBV",
     "IWM",
-    "PINS"
+    "PINS",
+    "ARM"
   ],
   "dca": [
     "DDOG",
