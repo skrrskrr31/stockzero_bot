@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 386,
+  "total": 387,
   "trending": [
     "CVX",
     "AAPL",
@@ -150,7 +150,6 @@
     "SHOP"
   ],
   "loss": [
-    "RIVN",
     "HOOD",
     "PTON",
     "SNAP",
@@ -169,6 +168,7 @@
     "ARKK",
     "ZM",
     "ZM",
-    "ZM"
+    "ZM",
+    "COIN"
   ]
 }
