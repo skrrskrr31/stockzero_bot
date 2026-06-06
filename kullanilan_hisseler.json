@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 392,
+  "total": 393,
   "trending": [
-    "AAPL",
     "HOOD",
     "TSLA",
     "NET",
@@ -115,7 +114,8 @@
     "ABBV",
     "IWM",
     "PINS",
-    "ARM"
+    "ARM",
+    "SNOW"
   ],
   "dca": [
     "NKE",
