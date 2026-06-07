@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 394,
+  "total": 395,
   "trending": [
     "HOOD",
     "TSLA",
@@ -150,7 +150,6 @@
     "DDOG"
   ],
   "loss": [
-    "PTON",
     "SNAP",
     "SPCE",
     "AMC",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "COIN",
-    "ZM"
+    "ZM",
+    "LCID"
   ]
 }
