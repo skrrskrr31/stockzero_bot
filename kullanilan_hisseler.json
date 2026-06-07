@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 396,
+  "total": 397,
   "trending": [
-    "HOOD",
     "TSLA",
     "NET",
     "NVDA",
@@ -115,7 +114,8 @@
     "IWM",
     "PINS",
     "ARM",
-    "SNOW"
+    "SNOW",
+    "JPM"
   ],
   "dca": [
     "META",
