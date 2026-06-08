@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 400,
+  "total": 401,
   "trending": [
-    "TSLA",
     "NET",
     "NVDA",
     "COST",
@@ -115,7 +114,8 @@
     "PINS",
     "ARM",
     "SNOW",
-    "JPM"
+    "JPM",
+    "INTC"
   ],
   "dca": [
     "PLTR",
