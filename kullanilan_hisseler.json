@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 404,
+  "total": 405,
   "trending": [
-    "NET",
     "NVDA",
     "COST",
     "SNAP",
@@ -115,7 +114,8 @@
     "ARM",
     "SNOW",
     "JPM",
-    "INTC"
+    "INTC",
+    "MSFT"
   ],
   "dca": [
     "UBER",
