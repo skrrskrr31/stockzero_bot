@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 401,
+  "total": 402,
   "trending": [
     "NET",
     "NVDA",
@@ -118,7 +118,6 @@
     "INTC"
   ],
   "dca": [
-    "PLTR",
     "UBER",
     "ABBV",
     "HD",
@@ -147,7 +146,8 @@
     "SHOP",
     "QQQ",
     "DDOG",
-    "NKE"
+    "NKE",
+    "META"
   ],
   "loss": [
     "SPCE",
