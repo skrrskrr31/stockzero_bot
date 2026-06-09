@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 402,
+  "total": 403,
   "trending": [
     "NET",
     "NVDA",
@@ -150,7 +150,6 @@
     "META"
   ],
   "loss": [
-    "SPCE",
     "AMC",
     "ZM",
     "BBBY",
@@ -169,6 +168,7 @@
     "COIN",
     "ZM",
     "LCID",
-    "HOOD"
+    "HOOD",
+    "ZM"
   ]
 }
