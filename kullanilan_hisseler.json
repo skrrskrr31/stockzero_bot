@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 406,
+  "total": 407,
   "trending": [
     "NVDA",
     "COST",
@@ -150,7 +150,6 @@
     "PLTR"
   ],
   "loss": [
-    "AMC",
     "ZM",
     "BBBY",
     "LEHM",
@@ -169,6 +168,7 @@
     "ZM",
     "LCID",
     "HOOD",
-    "ZM"
+    "ZM",
+    "RIVN"
   ]
 }
