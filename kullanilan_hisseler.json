@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 408,
+  "total": 409,
   "trending": [
-    "NVDA",
     "COST",
     "SNAP",
     "DDOG",
@@ -115,7 +114,8 @@
     "SNOW",
     "JPM",
     "INTC",
-    "MSFT"
+    "MSFT",
+    "RBLX"
   ],
   "dca": [
     "ABBV",
