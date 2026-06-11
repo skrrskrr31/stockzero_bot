@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 410,
+  "total": 411,
   "trending": [
     "COST",
     "SNAP",
@@ -150,7 +150,6 @@
     "UBER"
   ],
   "loss": [
-    "ZM",
     "BBBY",
     "LEHM",
     "ENRN",
@@ -169,6 +168,7 @@
     "LCID",
     "HOOD",
     "ZM",
-    "RIVN"
+    "RIVN",
+    "PTON"
   ]
 }
