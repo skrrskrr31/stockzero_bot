@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 412,
+  "total": 413,
   "trending": [
-    "COST",
     "SNAP",
     "DDOG",
     "NKE",
@@ -115,7 +114,8 @@
     "JPM",
     "INTC",
     "MSFT",
-    "RBLX"
+    "RBLX",
+    "QCOM"
   ],
   "dca": [
     "HD",
