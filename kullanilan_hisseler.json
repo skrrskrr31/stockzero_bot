@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 413,
+  "total": 414,
   "trending": [
     "SNAP",
     "DDOG",
@@ -118,7 +118,6 @@
     "QCOM"
   ],
   "dca": [
-    "HD",
     "COST",
     "MA",
     "AAPL",
@@ -147,7 +146,8 @@
     "NKE",
     "META",
     "PLTR",
-    "UBER"
+    "UBER",
+    "ABBV"
   ],
   "loss": [
     "BBBY",
