@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 424,
+  "total": 425,
   "trending": [
-    "NKE",
     "NFLX",
     "RIVN",
     "GM",
@@ -115,7 +114,8 @@
     "RBLX",
     "QCOM",
     "TSLA",
-    "NVDA"
+    "NVDA",
+    "PYPL"
   ],
   "dca": [
     "AAPL",
