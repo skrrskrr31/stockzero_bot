@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 428,
+  "total": 429,
   "trending": [
-    "NFLX",
     "RIVN",
     "GM",
     "CRWD",
@@ -115,7 +114,8 @@
     "QCOM",
     "TSLA",
     "NVDA",
-    "PYPL"
+    "PYPL",
+    "SNAP"
   ],
   "dca": [
     "AVGO",
