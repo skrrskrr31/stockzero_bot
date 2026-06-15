@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 426,
+  "total": 427,
   "trending": [
     "NFLX",
     "RIVN",
@@ -150,7 +150,6 @@
     "MA"
   ],
   "loss": [
-    "SIVB",
     "ZM",
     "ZM",
     "GME",
@@ -169,6 +168,7 @@
     "PTON",
     "AMC",
     "SNAP",
-    "ZM"
+    "ZM",
+    "ENRN"
   ]
 }
