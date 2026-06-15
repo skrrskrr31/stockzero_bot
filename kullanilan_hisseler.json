@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 425,
+  "total": 426,
   "trending": [
     "NFLX",
     "RIVN",
@@ -118,7 +118,6 @@
     "PYPL"
   ],
   "dca": [
-    "AAPL",
     "AVGO",
     "MSFT",
     "NFLX",
@@ -147,7 +146,8 @@
     "UBER",
     "ABBV",
     "HD",
-    "COST"
+    "COST",
+    "MA"
   ],
   "loss": [
     "SIVB",
