@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 429,
+  "total": 430,
   "trending": [
     "RIVN",
     "GM",
@@ -118,7 +118,6 @@
     "SNAP"
   ],
   "dca": [
-    "AVGO",
     "MSFT",
     "NFLX",
     "V",
@@ -147,7 +146,8 @@
     "ABBV",
     "HD",
     "COST",
-    "MA"
+    "MA",
+    "AAPL"
   ],
   "loss": [
     "ZM",
