@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 432,
+  "total": 433,
   "trending": [
-    "RIVN",
     "GM",
     "CRWD",
     "ARKK",
@@ -115,7 +114,8 @@
     "TSLA",
     "NVDA",
     "PYPL",
-    "SNAP"
+    "SNAP",
+    "DASH"
   ],
   "dca": [
     "MSFT",
