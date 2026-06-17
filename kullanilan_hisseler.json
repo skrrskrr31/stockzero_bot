@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 436,
+  "total": 437,
   "trending": [
-    "GM",
     "CRWD",
     "ARKK",
     "PLTR",
@@ -115,7 +114,8 @@
     "NVDA",
     "PYPL",
     "SNAP",
-    "DASH"
+    "DASH",
+    "SOFI"
   ],
   "dca": [
     "NFLX",
