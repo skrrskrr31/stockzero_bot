@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 437,
+  "total": 438,
   "trending": [
     "CRWD",
     "ARKK",
@@ -118,7 +118,6 @@
     "SOFI"
   ],
   "dca": [
-    "NFLX",
     "V",
     "JPM",
     "DIS",
@@ -147,7 +146,8 @@
     "COST",
     "MA",
     "AAPL",
-    "AVGO"
+    "AVGO",
+    "GOOGL"
   ],
   "loss": [
     "GME",
