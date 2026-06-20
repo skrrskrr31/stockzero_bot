@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 444,
+  "total": 445,
   "trending": [
-    "ARKK",
     "PLTR",
     "WMT",
     "SMCI",
@@ -115,7 +114,8 @@
     "SNAP",
     "DASH",
     "SOFI",
-    "META"
+    "META",
+    "GOOGL"
   ],
   "dca": [
     "JPM",
