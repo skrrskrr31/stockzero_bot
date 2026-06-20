@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 446,
+  "total": 447,
   "trending": [
     "PLTR",
     "WMT",
@@ -150,7 +150,6 @@
     "V"
   ],
   "loss": [
-    "ZM",
     "ARKK",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "SIVB",
     "ZM",
     "SPCE",
-    "LEHM"
+    "LEHM",
+    "BBBY"
   ]
 }
