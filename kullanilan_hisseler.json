@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 449,
+  "total": 450,
   "trending": [
     "WMT",
     "SMCI",
@@ -118,7 +118,6 @@
     "MA"
   ],
   "dca": [
-    "DIS",
     "MSFT",
     "NVDA",
     "CRWD",
@@ -147,7 +146,8 @@
     "AVGO",
     "GOOGL",
     "NFLX",
-    "V"
+    "V",
+    "JPM"
   ],
   "loss": [
     "ARKK",
