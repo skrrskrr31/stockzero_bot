@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 454,
+  "total": 455,
   "trending": [
     "SMCI",
     "NIO",
@@ -152,7 +152,6 @@
   "loss": [
     "ZM",
     "ZM",
-    "ZM",
     "COIN",
     "ZM",
     "LCID",
@@ -169,6 +168,7 @@
     "SPCE",
     "LEHM",
     "BBBY",
-    "ZM"
+    "ZM",
+    "GME"
   ]
 }
