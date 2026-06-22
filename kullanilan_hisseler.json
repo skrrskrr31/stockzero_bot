@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 453,
+  "total": 454,
   "trending": [
     "SMCI",
     "NIO",
@@ -118,7 +118,6 @@
     "CVX"
   ],
   "dca": [
-    "MSFT",
     "NVDA",
     "CRWD",
     "TSLA",
@@ -147,7 +146,8 @@
     "GOOGL",
     "NFLX",
     "V",
-    "JPM"
+    "JPM",
+    "DIS"
   ],
   "loss": [
     "ZM",
