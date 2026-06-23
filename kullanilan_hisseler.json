@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 457,
+  "total": 458,
   "trending": [
     "NIO",
     "AMZN",
@@ -118,7 +118,6 @@
     "MSTR"
   ],
   "dca": [
-    "NVDA",
     "CRWD",
     "TSLA",
     "XOM",
@@ -147,7 +146,8 @@
     "NFLX",
     "V",
     "JPM",
-    "DIS"
+    "DIS",
+    "MSFT"
   ],
   "loss": [
     "ZM",
