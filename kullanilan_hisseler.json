@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 460,
+  "total": 461,
   "trending": [
-    "NIO",
     "AMZN",
     "MDB",
     "ZS",
@@ -115,7 +114,8 @@
     "GOOGL",
     "MA",
     "CVX",
-    "MSTR"
+    "MSTR",
+    "DDOG"
   ],
   "dca": [
     "CRWD",
