@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 466,
+  "total": 467,
   "trending": [
     "MDB",
     "ZS",
@@ -150,7 +150,6 @@
     "CRWD"
   ],
   "loss": [
-    "COIN",
     "ZM",
     "LCID",
     "HOOD",
@@ -169,6 +168,7 @@
     "ZM",
     "GME",
     "ZM",
-    "ARKK"
+    "ARKK",
+    "ZM"
   ]
 }
