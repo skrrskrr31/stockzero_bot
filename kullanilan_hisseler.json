@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 464,
+  "total": 465,
   "trending": [
-    "AMZN",
     "MDB",
     "ZS",
     "MU",
@@ -115,7 +114,8 @@
     "MA",
     "CVX",
     "MSTR",
-    "DDOG"
+    "DDOG",
+    "SPOT"
   ],
   "dca": [
     "TSLA",
