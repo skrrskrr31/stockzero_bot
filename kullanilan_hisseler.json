@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 468,
+  "total": 469,
   "trending": [
-    "MDB",
     "ZS",
     "MU",
     "OXY",
@@ -115,7 +114,8 @@
     "CVX",
     "MSTR",
     "DDOG",
-    "SPOT"
+    "SPOT",
+    "TGT"
   ],
   "dca": [
     "XOM",
