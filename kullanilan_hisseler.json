@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 470,
+  "total": 471,
   "trending": [
     "ZS",
     "MU",
@@ -150,7 +150,6 @@
     "TSLA"
   ],
   "loss": [
-    "ZM",
     "LCID",
     "HOOD",
     "ZM",
@@ -169,6 +168,7 @@
     "GME",
     "ZM",
     "ARKK",
+    "ZM",
     "ZM"
   ]
 }
