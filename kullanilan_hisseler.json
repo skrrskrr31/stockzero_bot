@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 476,
+  "total": 477,
   "trending": [
-    "MU",
     "OXY",
     "F",
     "SPY",
@@ -115,7 +114,8 @@
     "DDOG",
     "SPOT",
     "TGT",
-    "COIN"
+    "COIN",
+    "SMCI"
   ],
   "dca": [
     "QCOM",
