@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 480,
+  "total": 481,
   "trending": [
-    "OXY",
     "F",
     "SPY",
     "MRNA",
@@ -115,7 +114,8 @@
     "SPOT",
     "TGT",
     "COIN",
-    "SMCI"
+    "SMCI",
+    "PANW"
   ],
   "dca": [
     "WMT",
