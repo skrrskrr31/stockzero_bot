@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 478,
+  "total": 479,
   "trending": [
     "OXY",
     "F",
@@ -150,7 +150,6 @@
     "AMZN"
   ],
   "loss": [
-    "HOOD",
     "ZM",
     "RIVN",
     "PTON",
@@ -169,6 +168,7 @@
     "ARKK",
     "ZM",
     "ZM",
-    "ZM"
+    "ZM",
+    "LCID"
   ]
 }
