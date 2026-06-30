@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 488,
+  "total": 489,
   "trending": [
-    "SPY",
     "MRNA",
     "ABBV",
     "IWM",
@@ -115,7 +114,8 @@
     "COIN",
     "SMCI",
     "PANW",
-    "NET"
+    "NET",
+    "NFLX"
   ],
   "dca": [
     "SPY",
