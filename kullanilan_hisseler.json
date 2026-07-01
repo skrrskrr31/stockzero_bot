@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 490,
+  "total": 491,
   "trending": [
     "MRNA",
     "ABBV",
@@ -150,7 +150,6 @@
     "AMD"
   ],
   "loss": [
-    "PTON",
     "AMC",
     "SNAP",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "LCID",
     "COIN",
-    "HOOD"
+    "HOOD",
+    "RIVN"
   ]
 }
