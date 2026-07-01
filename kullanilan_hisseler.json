@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 492,
+  "total": 493,
   "trending": [
-    "MRNA",
     "ABBV",
     "IWM",
     "PINS",
@@ -115,7 +114,8 @@
     "SMCI",
     "PANW",
     "NET",
-    "NFLX"
+    "NFLX",
+    "HOOD"
   ],
   "dca": [
     "GOOGL",
