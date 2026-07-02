@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 494,
+  "total": 495,
   "trending": [
     "ABBV",
     "IWM",
@@ -150,7 +150,6 @@
     "SPY"
   ],
   "loss": [
-    "AMC",
     "SNAP",
     "ZM",
     "ENRN",
@@ -169,6 +168,7 @@
     "LCID",
     "COIN",
     "HOOD",
-    "RIVN"
+    "RIVN",
+    "PTON"
   ]
 }
