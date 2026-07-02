@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 493,
+  "total": 494,
   "trending": [
     "ABBV",
     "IWM",
@@ -118,7 +118,6 @@
     "HOOD"
   ],
   "dca": [
-    "GOOGL",
     "LLY",
     "PFE",
     "SHOP",
@@ -147,7 +146,8 @@
     "AMZN",
     "QCOM",
     "WMT",
-    "AMD"
+    "AMD",
+    "SPY"
   ],
   "loss": [
     "AMC",
