@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 496,
+  "total": 497,
   "trending": [
-    "ABBV",
     "IWM",
     "PINS",
     "ARM",
@@ -115,7 +114,8 @@
     "PANW",
     "NET",
     "NFLX",
-    "HOOD"
+    "HOOD",
+    "AMZN"
   ],
   "dca": [
     "LLY",
