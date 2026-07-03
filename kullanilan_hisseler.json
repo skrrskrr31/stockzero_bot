@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 500,
+  "total": 501,
   "trending": [
-    "IWM",
     "PINS",
     "ARM",
     "SNOW",
@@ -115,7 +114,8 @@
     "NET",
     "NFLX",
     "HOOD",
-    "AMZN"
+    "AMZN",
+    "MRNA"
   ],
   "dca": [
     "PFE",
