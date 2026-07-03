@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 497,
+  "total": 498,
   "trending": [
     "IWM",
     "PINS",
@@ -118,7 +118,6 @@
     "AMZN"
   ],
   "dca": [
-    "LLY",
     "PFE",
     "SHOP",
     "QQQ",
@@ -147,7 +146,8 @@
     "QCOM",
     "WMT",
     "AMD",
-    "SPY"
+    "SPY",
+    "NFLX"
   ],
   "loss": [
     "SNAP",
