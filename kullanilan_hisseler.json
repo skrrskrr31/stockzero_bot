@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 504,
+  "total": 505,
   "trending": [
-    "PINS",
     "ARM",
     "SNOW",
     "JPM",
@@ -115,7 +114,8 @@
     "NFLX",
     "HOOD",
     "AMZN",
-    "MRNA"
+    "MRNA",
+    "MDB"
   ],
   "dca": [
     "SHOP",
