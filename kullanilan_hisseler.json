@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 505,
+  "total": 506,
   "trending": [
     "ARM",
     "SNOW",
@@ -118,7 +118,6 @@
     "MDB"
   ],
   "dca": [
-    "SHOP",
     "QQQ",
     "DDOG",
     "NKE",
@@ -147,7 +146,8 @@
     "AMD",
     "SPY",
     "NFLX",
-    "LLY"
+    "LLY",
+    "PFE"
   ],
   "loss": [
     "ENRN",
