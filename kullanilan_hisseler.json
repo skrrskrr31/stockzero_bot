@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 510,
+  "total": 511,
   "trending": [
     "SNOW",
     "JPM",
@@ -150,7 +150,6 @@
     "SHOP"
   ],
   "loss": [
-    "SIVB",
     "ZM",
     "SPCE",
     "LEHM",
@@ -169,6 +168,7 @@
     "PTON",
     "ZM",
     "SNAP",
-    "ZM"
+    "ZM",
+    "ENRN"
   ]
 }
