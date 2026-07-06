@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 512,
+  "total": 513,
   "trending": [
-    "SNOW",
     "JPM",
     "INTC",
     "MSFT",
@@ -115,7 +114,8 @@
     "AMZN",
     "MRNA",
     "MDB",
-    "NIO"
+    "NIO",
+    "QQQ"
   ],
   "dca": [
     "DDOG",
