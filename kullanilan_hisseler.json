@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 509,
+  "total": 510,
   "trending": [
     "SNOW",
     "JPM",
@@ -118,7 +118,6 @@
     "NIO"
   ],
   "dca": [
-    "QQQ",
     "DDOG",
     "NKE",
     "META",
@@ -147,7 +146,8 @@
     "SPY",
     "NFLX",
     "LLY",
-    "PFE"
+    "PFE",
+    "SHOP"
   ],
   "loss": [
     "SIVB",
