@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 520,
+  "total": 521,
   "trending": [
-    "INTC",
     "MSFT",
     "RBLX",
     "QCOM",
@@ -115,7 +114,8 @@
     "MDB",
     "NIO",
     "QQQ",
-    "RIVN"
+    "RIVN",
+    "ARM"
   ],
   "dca": [
     "META",
