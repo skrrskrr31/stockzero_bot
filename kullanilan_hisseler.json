@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 522,
+  "total": 523,
   "trending": [
     "MSFT",
     "RBLX",
@@ -150,7 +150,6 @@
     "NKE"
   ],
   "loss": [
-    "LEHM",
     "BBBY",
     "ZM",
     "GME",
@@ -169,6 +168,7 @@
     "ZM",
     "ENRN",
     "ZM",
-    "SIVB"
+    "SIVB",
+    "ZM"
   ]
 }
