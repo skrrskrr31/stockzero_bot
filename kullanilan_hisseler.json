@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 526,
+  "total": 527,
   "trending": [
     "RBLX",
     "QCOM",
@@ -150,7 +150,6 @@
     "META"
   ],
   "loss": [
-    "BBBY",
     "ZM",
     "GME",
     "ZM",
@@ -169,6 +168,7 @@
     "ENRN",
     "ZM",
     "SIVB",
+    "ZM",
     "ZM"
   ]
 }
