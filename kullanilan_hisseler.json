@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 524,
+  "total": 525,
   "trending": [
-    "MSFT",
     "RBLX",
     "QCOM",
     "TSLA",
@@ -115,7 +114,8 @@
     "NIO",
     "QQQ",
     "RIVN",
-    "ARM"
+    "ARM",
+    "JPM"
   ],
   "dca": [
     "PLTR",
