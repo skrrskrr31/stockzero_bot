@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 525,
+  "total": 526,
   "trending": [
     "RBLX",
     "QCOM",
@@ -118,7 +118,6 @@
     "JPM"
   ],
   "dca": [
-    "PLTR",
     "UBER",
     "ABBV",
     "HD",
@@ -147,7 +146,8 @@
     "SHOP",
     "QQQ",
     "DDOG",
-    "NKE"
+    "NKE",
+    "META"
   ],
   "loss": [
     "BBBY",
