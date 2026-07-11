@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 528,
+  "total": 529,
   "trending": [
-    "RBLX",
     "QCOM",
     "TSLA",
     "NVDA",
@@ -115,7 +114,8 @@
     "QQQ",
     "RIVN",
     "ARM",
-    "JPM"
+    "JPM",
+    "LLY"
   ],
   "dca": [
     "UBER",
