@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 530,
+  "total": 531,
   "trending": [
     "QCOM",
     "TSLA",
@@ -150,7 +150,6 @@
     "PLTR"
   ],
   "loss": [
-    "ZM",
     "GME",
     "ZM",
     "ARKK",
@@ -169,6 +168,7 @@
     "ZM",
     "SIVB",
     "ZM",
-    "ZM"
+    "ZM",
+    "AMC"
   ]
 }
