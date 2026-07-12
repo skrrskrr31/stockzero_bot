@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 532,
+  "total": 533,
   "trending": [
-    "QCOM",
     "TSLA",
     "NVDA",
     "PYPL",
@@ -115,7 +114,8 @@
     "RIVN",
     "ARM",
     "JPM",
-    "LLY"
+    "LLY",
+    "ARKK"
   ],
   "dca": [
     "ABBV",
