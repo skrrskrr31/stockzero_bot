@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 533,
+  "total": 534,
   "trending": [
     "TSLA",
     "NVDA",
@@ -118,7 +118,6 @@
     "ARKK"
   ],
   "dca": [
-    "ABBV",
     "HD",
     "COST",
     "MA",
@@ -147,7 +146,8 @@
     "DDOG",
     "NKE",
     "META",
-    "PLTR"
+    "PLTR",
+    "UBER"
   ],
   "loss": [
     "GME",
