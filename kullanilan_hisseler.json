@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 534,
+  "total": 535,
   "trending": [
     "TSLA",
     "NVDA",
@@ -150,7 +150,6 @@
     "UBER"
   ],
   "loss": [
-    "GME",
     "ZM",
     "ARKK",
     "ZM",
@@ -169,6 +168,7 @@
     "SIVB",
     "ZM",
     "ZM",
-    "AMC"
+    "AMC",
+    "ZM"
   ]
 }
