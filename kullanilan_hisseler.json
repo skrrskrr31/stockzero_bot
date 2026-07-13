@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 538,
+  "total": 539,
   "trending": [
     "NVDA",
     "PYPL",
@@ -150,7 +150,6 @@
     "ABBV"
   ],
   "loss": [
-    "ZM",
     "ARKK",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "AMC",
-    "ZM"
+    "ZM",
+    "SPCE"
   ]
 }
