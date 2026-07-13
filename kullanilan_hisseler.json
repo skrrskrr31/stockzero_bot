@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 536,
+  "total": 537,
   "trending": [
-    "TSLA",
     "NVDA",
     "PYPL",
     "SNAP",
@@ -115,7 +114,8 @@
     "ARM",
     "JPM",
     "LLY",
-    "ARKK"
+    "ARKK",
+    "OXY"
   ],
   "dca": [
     "HD",
