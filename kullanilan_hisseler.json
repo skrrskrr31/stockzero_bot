@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 540,
+  "total": 541,
   "trending": [
-    "NVDA",
     "PYPL",
     "SNAP",
     "DASH",
@@ -115,7 +114,8 @@
     "JPM",
     "LLY",
     "ARKK",
-    "OXY"
+    "OXY",
+    "ZS"
   ],
   "dca": [
     "COST",
