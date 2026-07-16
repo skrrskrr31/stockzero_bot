@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 550,
+  "total": 551,
   "trending": [
     "DASH",
     "SOFI",
@@ -151,7 +151,6 @@
   ],
   "loss": [
     "ZM",
-    "ZM",
     "LCID",
     "COIN",
     "HOOD",
@@ -169,6 +168,7 @@
     "ZM",
     "SPCE",
     "LEHM",
-    "BBBY"
+    "BBBY",
+    "ARKK"
   ]
 }
