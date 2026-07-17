@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 553,
+  "total": 554,
   "trending": [
     "SOFI",
     "META",
@@ -118,7 +118,6 @@
     "TSLA"
   ],
   "dca": [
-    "AVGO",
     "GOOGL",
     "NFLX",
     "V",
@@ -147,7 +146,8 @@
     "ABBV",
     "HD",
     "COST",
-    "MA"
+    "MA",
+    "AAPL"
   ],
   "loss": [
     "ZM",
