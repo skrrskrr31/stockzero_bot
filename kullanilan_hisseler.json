@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 558,
+  "total": 559,
   "trending": [
     "META",
     "GOOGL",
@@ -150,7 +150,6 @@
     "AVGO"
   ],
   "loss": [
-    "LCID",
     "COIN",
     "HOOD",
     "RIVN",
@@ -169,6 +168,7 @@
     "LEHM",
     "BBBY",
     "ARKK",
-    "GME"
+    "GME",
+    "ZM"
   ]
 }
