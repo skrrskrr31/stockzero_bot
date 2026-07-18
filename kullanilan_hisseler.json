@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 557,
+  "total": 558,
   "trending": [
     "META",
     "GOOGL",
@@ -118,7 +118,6 @@
     "RBLX"
   ],
   "dca": [
-    "GOOGL",
     "NFLX",
     "V",
     "JPM",
@@ -147,7 +146,8 @@
     "HD",
     "COST",
     "MA",
-    "AAPL"
+    "AAPL",
+    "AVGO"
   ],
   "loss": [
     "LCID",
