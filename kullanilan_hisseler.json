@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 561,
+  "total": 562,
   "trending": [
     "GOOGL",
     "MA",
@@ -118,7 +118,6 @@
     "SNAP"
   ],
   "dca": [
-    "NFLX",
     "V",
     "JPM",
     "DIS",
@@ -147,7 +146,8 @@
     "COST",
     "MA",
     "AAPL",
-    "AVGO"
+    "AVGO",
+    "GOOGL"
   ],
   "loss": [
     "COIN",
