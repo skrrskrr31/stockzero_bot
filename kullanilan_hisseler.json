@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 564,
+  "total": 565,
   "trending": [
-    "GOOGL",
     "MA",
     "CVX",
     "MSTR",
@@ -115,7 +114,8 @@
     "AVGO",
     "TSLA",
     "RBLX",
-    "SNAP"
+    "SNAP",
+    "SPY"
   ],
   "dca": [
     "V",
