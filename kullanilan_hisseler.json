@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 565,
+  "total": 566,
   "trending": [
     "MA",
     "CVX",
@@ -118,7 +118,6 @@
     "SPY"
   ],
   "dca": [
-    "V",
     "JPM",
     "DIS",
     "MSFT",
@@ -147,6 +146,7 @@
     "MA",
     "AAPL",
     "AVGO",
+    "GOOGL",
     "GOOGL"
   ],
   "loss": [
