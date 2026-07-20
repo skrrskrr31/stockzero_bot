@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 566,
+  "total": 567,
   "trending": [
     "MA",
     "CVX",
@@ -150,7 +150,6 @@
     "GOOGL"
   ],
   "loss": [
-    "HOOD",
     "RIVN",
     "PTON",
     "ZM",
@@ -168,6 +167,7 @@
     "BBBY",
     "ARKK",
     "GME",
+    "ZM",
     "ZM",
     "ZM"
   ]
