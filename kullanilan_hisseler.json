@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 568,
+  "total": 569,
   "trending": [
-    "MA",
     "CVX",
     "MSTR",
     "DDOG",
@@ -115,7 +114,8 @@
     "TSLA",
     "RBLX",
     "SNAP",
-    "SPY"
+    "SPY",
+    "INTC"
   ],
   "dca": [
     "JPM",
