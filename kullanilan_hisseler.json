@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 569,
+  "total": 570,
   "trending": [
     "CVX",
     "MSTR",
@@ -118,7 +118,6 @@
     "INTC"
   ],
   "dca": [
-    "JPM",
     "DIS",
     "MSFT",
     "NVDA",
@@ -147,7 +146,8 @@
     "AAPL",
     "AVGO",
     "GOOGL",
-    "GOOGL"
+    "GOOGL",
+    "V"
   ],
   "loss": [
     "RIVN",
