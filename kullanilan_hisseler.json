@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 570,
+  "total": 571,
   "trending": [
     "CVX",
     "MSTR",
@@ -150,7 +150,6 @@
     "V"
   ],
   "loss": [
-    "RIVN",
     "PTON",
     "ZM",
     "SNAP",
@@ -169,6 +168,7 @@
     "GME",
     "ZM",
     "ZM",
-    "ZM"
+    "ZM",
+    "HOOD"
   ]
 }
