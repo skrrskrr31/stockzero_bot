@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 572,
+  "total": 573,
   "trending": [
-    "CVX",
     "MSTR",
     "DDOG",
     "SPOT",
@@ -115,7 +114,8 @@
     "RBLX",
     "SNAP",
     "SPY",
-    "INTC"
+    "INTC",
+    "WMT"
   ],
   "dca": [
     "DIS",
