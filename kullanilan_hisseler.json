@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 573,
+  "total": 574,
   "trending": [
     "MSTR",
     "DDOG",
@@ -118,7 +118,6 @@
     "WMT"
   ],
   "dca": [
-    "DIS",
     "MSFT",
     "NVDA",
     "CRWD",
@@ -147,7 +146,8 @@
     "AVGO",
     "GOOGL",
     "GOOGL",
-    "V"
+    "V",
+    "JPM"
   ],
   "loss": [
     "PTON",
