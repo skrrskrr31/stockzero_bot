@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 578,
+  "total": 579,
   "trending": [
     "DDOG",
     "SPOT",
@@ -150,7 +150,6 @@
     "DIS"
   ],
   "loss": [
-    "ZM",
     "SNAP",
     "ZM",
     "ENRN",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "HOOD",
-    "RIVN"
+    "RIVN",
+    "ZM"
   ]
 }
