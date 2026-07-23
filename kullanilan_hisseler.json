@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 577,
+  "total": 578,
   "trending": [
     "DDOG",
     "SPOT",
@@ -118,7 +118,6 @@
     "DASH"
   ],
   "dca": [
-    "MSFT",
     "NVDA",
     "CRWD",
     "TSLA",
@@ -147,7 +146,8 @@
     "GOOGL",
     "GOOGL",
     "V",
-    "JPM"
+    "JPM",
+    "DIS"
   ],
   "loss": [
     "ZM",
