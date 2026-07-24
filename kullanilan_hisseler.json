@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 580,
+  "total": 581,
   "trending": [
-    "DDOG",
     "SPOT",
     "TGT",
     "COIN",
@@ -115,7 +114,8 @@
     "SPY",
     "INTC",
     "WMT",
-    "DASH"
+    "DASH",
+    "COST"
   ],
   "dca": [
     "NVDA",
