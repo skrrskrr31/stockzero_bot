@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 586,
+  "total": 587,
   "trending": [
     "TGT",
     "COIN",
@@ -150,7 +150,6 @@
     "NVDA"
   ],
   "loss": [
-    "ZM",
     "ENRN",
     "ZM",
     "SIVB",
@@ -169,6 +168,7 @@
     "HOOD",
     "RIVN",
     "ZM",
-    "ZM"
+    "ZM",
+    "PTON"
   ]
 }
