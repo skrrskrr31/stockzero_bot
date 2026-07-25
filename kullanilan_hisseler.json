@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 584,
+  "total": 585,
   "trending": [
-    "SPOT",
     "TGT",
     "COIN",
     "SMCI",
@@ -115,7 +114,8 @@
     "INTC",
     "WMT",
     "DASH",
-    "COST"
+    "COST",
+    "ABNB"
   ],
   "dca": [
     "CRWD",
