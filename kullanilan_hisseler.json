@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 585,
+  "total": 586,
   "trending": [
     "TGT",
     "COIN",
@@ -118,7 +118,6 @@
     "ABNB"
   ],
   "dca": [
-    "CRWD",
     "TSLA",
     "XOM",
     "AMZN",
@@ -147,7 +146,8 @@
     "V",
     "JPM",
     "DIS",
-    "MSFT"
+    "MSFT",
+    "NVDA"
   ],
   "loss": [
     "ZM",
