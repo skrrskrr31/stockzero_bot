@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 588,
+  "total": 589,
   "trending": [
-    "TGT",
     "COIN",
     "SMCI",
     "PANW",
@@ -115,7 +114,8 @@
     "WMT",
     "DASH",
     "COST",
-    "ABNB"
+    "ABNB",
+    "PLTR"
   ],
   "dca": [
     "TSLA",
