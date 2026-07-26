@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 590,
+  "total": 591,
   "trending": [
     "COIN",
     "SMCI",
@@ -150,7 +150,6 @@
     "CRWD"
   ],
   "loss": [
-    "ENRN",
     "ZM",
     "SIVB",
     "ZM",
@@ -169,6 +168,7 @@
     "RIVN",
     "ZM",
     "ZM",
-    "PTON"
+    "PTON",
+    "ZM"
   ]
 }
