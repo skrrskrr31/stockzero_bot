@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 593,
+  "total": 594,
   "trending": [
     "SMCI",
     "PANW",
@@ -118,7 +118,6 @@
     "MSFT"
   ],
   "dca": [
-    "XOM",
     "AMZN",
     "QCOM",
     "WMT",
@@ -147,7 +146,8 @@
     "DIS",
     "MSFT",
     "NVDA",
-    "CRWD"
+    "CRWD",
+    "TSLA"
   ],
   "loss": [
     "ZM",
