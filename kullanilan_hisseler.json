@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 592,
+  "total": 593,
   "trending": [
-    "COIN",
     "SMCI",
     "PANW",
     "NET",
@@ -115,7 +114,8 @@
     "DASH",
     "COST",
     "ABNB",
-    "PLTR"
+    "PLTR",
+    "MSFT"
   ],
   "dca": [
     "XOM",
