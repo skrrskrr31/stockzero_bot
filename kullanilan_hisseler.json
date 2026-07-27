@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 594,
+  "total": 595,
   "trending": [
     "SMCI",
     "PANW",
@@ -150,7 +150,6 @@
     "TSLA"
   ],
   "loss": [
-    "ZM",
     "SIVB",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "PTON",
-    "ZM"
+    "ZM",
+    "ENRN"
   ]
 }
