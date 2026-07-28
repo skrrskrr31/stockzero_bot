@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 596,
+  "total": 597,
   "trending": [
-    "SMCI",
     "PANW",
     "NET",
     "NFLX",
@@ -115,7 +114,8 @@
     "COST",
     "ABNB",
     "PLTR",
-    "MSFT"
+    "MSFT",
+    "SHOP"
   ],
   "dca": [
     "AMZN",
