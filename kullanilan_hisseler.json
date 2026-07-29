@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 602,
+  "total": 603,
   "trending": [
     "NET",
     "NFLX",
@@ -151,7 +151,6 @@
   ],
   "loss": [
     "ZM",
-    "ZM",
     "AMC",
     "ZM",
     "SPCE",
@@ -169,6 +168,7 @@
     "PTON",
     "ZM",
     "ENRN",
-    "COIN"
+    "COIN",
+    "ZM"
   ]
 }
