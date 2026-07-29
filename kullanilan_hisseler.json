@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 600,
+  "total": 601,
   "trending": [
-    "PANW",
     "NET",
     "NFLX",
     "HOOD",
@@ -115,7 +114,8 @@
     "ABNB",
     "PLTR",
     "MSFT",
-    "SHOP"
+    "SHOP",
+    "SMCI"
   ],
   "dca": [
     "QCOM",
