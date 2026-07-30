@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 604,
+  "total": 605,
   "trending": [
-    "NET",
     "NFLX",
     "HOOD",
     "AMZN",
@@ -115,7 +114,8 @@
     "PLTR",
     "MSFT",
     "SHOP",
-    "SMCI"
+    "SMCI",
+    "QCOM"
   ],
   "dca": [
     "WMT",
