@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 610,
+  "total": 611,
   "trending": [
     "HOOD",
     "AMZN",
@@ -150,7 +150,6 @@
     "WMT"
   ],
   "loss": [
-    "AMC",
     "ZM",
     "SPCE",
     "LEHM",
@@ -169,6 +168,7 @@
     "ENRN",
     "COIN",
     "ZM",
-    "ZM"
+    "ZM",
+    "SIVB"
   ]
 }
