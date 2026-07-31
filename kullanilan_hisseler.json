@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 609,
+  "total": 610,
   "trending": [
     "HOOD",
     "AMZN",
@@ -118,7 +118,6 @@
     "AMD"
   ],
   "dca": [
-    "AMD",
     "SPY",
     "NFLX",
     "LLY",
@@ -147,7 +146,8 @@
     "TSLA",
     "XOM",
     "AMZN",
-    "QCOM"
+    "QCOM",
+    "WMT"
   ],
   "loss": [
     "AMC",
