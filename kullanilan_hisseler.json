@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 612,
+  "total": 613,
   "trending": [
-    "HOOD",
     "AMZN",
     "MRNA",
     "MDB",
@@ -115,7 +114,8 @@
     "SHOP",
     "SMCI",
     "QCOM",
-    "AMD"
+    "AMD",
+    "SOFI"
   ],
   "dca": [
     "SPY",
