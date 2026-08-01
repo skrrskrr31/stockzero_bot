@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 614,
+  "total": 615,
   "trending": [
     "AMZN",
     "MRNA",
@@ -150,7 +150,6 @@
     "AMD"
   ],
   "loss": [
-    "ZM",
     "SPCE",
     "LEHM",
     "BBBY",
@@ -169,6 +168,7 @@
     "COIN",
     "ZM",
     "ZM",
-    "SIVB"
+    "SIVB",
+    "ZM"
   ]
 }
