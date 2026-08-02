@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 618,
+  "total": 619,
   "trending": [
     "MRNA",
     "MDB",
@@ -150,7 +150,6 @@
     "SPY"
   ],
   "loss": [
-    "SPCE",
     "LEHM",
     "BBBY",
     "ARKK",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "SIVB",
-    "ZM"
+    "ZM",
+    "LCID"
   ]
 }
