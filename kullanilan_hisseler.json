@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 617,
+  "total": 618,
   "trending": [
     "MRNA",
     "MDB",
@@ -118,7 +118,6 @@
     "GM"
   ],
   "dca": [
-    "NFLX",
     "LLY",
     "PFE",
     "SHOP",
@@ -147,7 +146,8 @@
     "AMZN",
     "QCOM",
     "WMT",
-    "AMD"
+    "AMD",
+    "SPY"
   ],
   "loss": [
     "SPCE",
