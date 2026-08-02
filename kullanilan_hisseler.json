@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 616,
+  "total": 617,
   "trending": [
-    "AMZN",
     "MRNA",
     "MDB",
     "NIO",
@@ -115,7 +114,8 @@
     "SMCI",
     "QCOM",
     "AMD",
-    "SOFI"
+    "SOFI",
+    "GM"
   ],
   "dca": [
     "NFLX",
