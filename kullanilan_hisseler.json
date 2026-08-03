@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 621,
+  "total": 622,
   "trending": [
     "MDB",
     "NIO",
@@ -118,7 +118,6 @@
     "COIN"
   ],
   "dca": [
-    "LLY",
     "PFE",
     "SHOP",
     "QQQ",
@@ -147,7 +146,8 @@
     "QCOM",
     "WMT",
     "AMD",
-    "SPY"
+    "SPY",
+    "NFLX"
   ],
   "loss": [
     "LEHM",
