@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 622,
+  "total": 623,
   "trending": [
     "MDB",
     "NIO",
@@ -150,7 +150,6 @@
     "NFLX"
   ],
   "loss": [
-    "LEHM",
     "BBBY",
     "ARKK",
     "GME",
@@ -169,6 +168,7 @@
     "ZM",
     "SIVB",
     "ZM",
-    "LCID"
+    "LCID",
+    "SPCE"
   ]
 }
