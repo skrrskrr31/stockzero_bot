@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 625,
+  "total": 626,
   "trending": [
     "NIO",
     "QQQ",
@@ -118,7 +118,6 @@
     "DDOG"
   ],
   "dca": [
-    "PFE",
     "SHOP",
     "QQQ",
     "DDOG",
@@ -147,7 +146,8 @@
     "WMT",
     "AMD",
     "SPY",
-    "NFLX"
+    "NFLX",
+    "LLY"
   ],
   "loss": [
     "BBBY",
