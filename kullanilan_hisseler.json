@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 624,
+  "total": 625,
   "trending": [
-    "MDB",
     "NIO",
     "QQQ",
     "RIVN",
@@ -115,7 +114,8 @@
     "AMD",
     "SOFI",
     "GM",
-    "COIN"
+    "COIN",
+    "DDOG"
   ],
   "dca": [
     "PFE",
