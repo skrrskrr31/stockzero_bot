@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 628,
+  "total": 629,
   "trending": [
-    "NIO",
     "QQQ",
     "RIVN",
     "ARM",
@@ -115,7 +114,8 @@
     "SOFI",
     "GM",
     "COIN",
-    "DDOG"
+    "DDOG",
+    "GOOGL"
   ],
   "dca": [
     "SHOP",
