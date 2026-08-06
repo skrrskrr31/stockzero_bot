@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 632,
+  "total": 633,
   "trending": [
-    "QQQ",
     "RIVN",
     "ARM",
     "JPM",
@@ -115,7 +114,8 @@
     "GM",
     "COIN",
     "DDOG",
-    "GOOGL"
+    "GOOGL",
+    "META"
   ],
   "dca": [
     "QQQ",
