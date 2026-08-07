@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 633,
+  "total": 634,
   "trending": [
     "RIVN",
     "ARM",
@@ -118,7 +118,6 @@
     "META"
   ],
   "dca": [
-    "QQQ",
     "DDOG",
     "NKE",
     "META",
@@ -147,7 +146,8 @@
     "SPY",
     "NFLX",
     "LLY",
-    "PFE"
+    "PFE",
+    "SHOP"
   ],
   "loss": [
     "GME",
