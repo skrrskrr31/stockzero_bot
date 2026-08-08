@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 640,
+  "total": 641,
   "trending": [
-    "ARM",
     "JPM",
     "LLY",
     "ARKK",
@@ -115,7 +114,8 @@
     "DDOG",
     "GOOGL",
     "META",
-    "F"
+    "F",
+    "SPOT"
   ],
   "dca": [
     "NKE",
