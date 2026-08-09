@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 644,
+  "total": 645,
   "trending": [
-    "JPM",
     "LLY",
     "ARKK",
     "OXY",
@@ -115,7 +114,8 @@
     "GOOGL",
     "META",
     "F",
-    "SPOT"
+    "SPOT",
+    "HD"
   ],
   "dca": [
     "META",
