@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 642,
+  "total": 643,
   "trending": [
     "JPM",
     "LLY",
@@ -151,7 +151,6 @@
   ],
   "loss": [
     "ZM",
-    "ZM",
     "HOOD",
     "RIVN",
     "ZM",
@@ -169,6 +168,7 @@
     "SNAP",
     "ZM",
     "AMC",
-    "LEHM"
+    "LEHM",
+    "GME"
   ]
 }
