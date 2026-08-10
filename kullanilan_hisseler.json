@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 645,
+  "total": 646,
   "trending": [
     "LLY",
     "ARKK",
@@ -118,7 +118,6 @@
     "HD"
   ],
   "dca": [
-    "META",
     "PLTR",
     "UBER",
     "ABBV",
@@ -147,7 +146,8 @@
     "PFE",
     "SHOP",
     "QQQ",
-    "DDOG"
+    "DDOG",
+    "NKE"
   ],
   "loss": [
     "ZM",
