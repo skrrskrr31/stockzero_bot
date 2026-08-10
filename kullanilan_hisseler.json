@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 646,
+  "total": 647,
   "trending": [
     "LLY",
     "ARKK",
@@ -150,7 +150,6 @@
     "NKE"
   ],
   "loss": [
-    "ZM",
     "HOOD",
     "RIVN",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "AMC",
     "LEHM",
-    "GME"
+    "GME",
+    "ARKK"
   ]
 }
