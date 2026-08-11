@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 649,
+  "total": 650,
   "trending": [
     "ARKK",
     "OXY",
@@ -118,7 +118,6 @@
     "MDB"
   ],
   "dca": [
-    "PLTR",
     "UBER",
     "ABBV",
     "HD",
@@ -147,7 +146,8 @@
     "SHOP",
     "QQQ",
     "DDOG",
-    "NKE"
+    "NKE",
+    "META"
   ],
   "loss": [
     "HOOD",
