@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 653,
+  "total": 654,
   "trending": [
     "OXY",
     "ZS",
@@ -118,7 +118,6 @@
     "RIVN"
   ],
   "dca": [
-    "UBER",
     "ABBV",
     "HD",
     "COST",
@@ -147,7 +146,8 @@
     "QQQ",
     "DDOG",
     "NKE",
-    "META"
+    "META",
+    "PLTR"
   ],
   "loss": [
     "RIVN",
