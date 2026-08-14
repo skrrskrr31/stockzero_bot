@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 661,
+  "total": 662,
   "trending": [
     "CRWD",
     "AVGO",
@@ -118,7 +118,6 @@
     "CVX"
   ],
   "dca": [
-    "HD",
     "COST",
     "MA",
     "AAPL",
@@ -147,7 +146,8 @@
     "NKE",
     "META",
     "PLTR",
-    "UBER"
+    "UBER",
+    "ABBV"
   ],
   "loss": [
     "ZM",
