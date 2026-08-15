@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 666,
+  "total": 667,
   "trending": [
     "AVGO",
     "TSLA",
@@ -150,7 +150,6 @@
     "HD"
   ],
   "loss": [
-    "PTON",
     "ZM",
     "ENRN",
     "COIN",
@@ -169,6 +168,7 @@
     "ZM",
     "BBBY",
     "ZM",
-    "ZM"
+    "ZM",
+    "RIVN"
   ]
 }
