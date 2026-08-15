@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 665,
+  "total": 666,
   "trending": [
     "AVGO",
     "TSLA",
@@ -118,7 +118,6 @@
     "NIO"
   ],
   "dca": [
-    "COST",
     "MA",
     "AAPL",
     "AVGO",
@@ -147,7 +146,8 @@
     "META",
     "PLTR",
     "UBER",
-    "ABBV"
+    "ABBV",
+    "HD"
   ],
   "loss": [
     "PTON",
