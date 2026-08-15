@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 664,
+  "total": 665,
   "trending": [
-    "CRWD",
     "AVGO",
     "TSLA",
     "RBLX",
@@ -115,7 +114,8 @@
     "MDB",
     "RIVN",
     "AMZN",
-    "CVX"
+    "CVX",
+    "NIO"
   ],
   "dca": [
     "COST",
