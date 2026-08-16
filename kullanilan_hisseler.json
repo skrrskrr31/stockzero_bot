@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 670,
+  "total": 671,
   "trending": [
     "TSLA",
     "RBLX",
@@ -150,7 +150,6 @@
     "COST"
   ],
   "loss": [
-    "ZM",
     "ENRN",
     "COIN",
     "ZM",
@@ -169,6 +168,7 @@
     "BBBY",
     "ZM",
     "ZM",
-    "RIVN"
+    "RIVN",
+    "ZM"
   ]
 }
