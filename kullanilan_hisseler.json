@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 673,
+  "total": 674,
   "trending": [
     "RBLX",
     "SNAP",
@@ -118,7 +118,6 @@
     "QQQ"
   ],
   "dca": [
-    "AAPL",
     "AVGO",
     "GOOGL",
     "GOOGL",
@@ -147,7 +146,8 @@
     "UBER",
     "ABBV",
     "HD",
-    "COST"
+    "COST",
+    "MA"
   ],
   "loss": [
     "ENRN",
