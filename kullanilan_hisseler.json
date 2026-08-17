@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 674,
+  "total": 675,
   "trending": [
     "RBLX",
     "SNAP",
@@ -150,7 +150,6 @@
     "MA"
   ],
   "loss": [
-    "ENRN",
     "COIN",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "ZM",
     "RIVN",
-    "ZM"
+    "ZM",
+    "HOOD"
   ]
 }
