@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 676,
+  "total": 677,
   "trending": [
-    "RBLX",
     "SNAP",
     "SPY",
     "INTC",
@@ -115,7 +114,8 @@
     "CVX",
     "NIO",
     "NET",
-    "QQQ"
+    "QQQ",
+    "NFLX"
   ],
   "dca": [
     "AVGO",
