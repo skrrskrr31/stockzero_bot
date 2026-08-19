@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 680,
+  "total": 681,
   "trending": [
-    "SNAP",
     "SPY",
     "INTC",
     "WMT",
@@ -115,7 +114,8 @@
     "NIO",
     "NET",
     "QQQ",
-    "NFLX"
+    "NFLX",
+    "PINS"
   ],
   "dca": [
     "GOOGL",
