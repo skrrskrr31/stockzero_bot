@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 681,
+  "total": 682,
   "trending": [
     "SPY",
     "INTC",
@@ -119,7 +119,6 @@
   ],
   "dca": [
     "GOOGL",
-    "GOOGL",
     "V",
     "JPM",
     "DIS",
@@ -147,7 +146,8 @@
     "HD",
     "COST",
     "MA",
-    "AAPL"
+    "AAPL",
+    "AVGO"
   ],
   "loss": [
     "ZM",
