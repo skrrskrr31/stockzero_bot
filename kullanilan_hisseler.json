@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 689,
+  "total": 690,
   "trending": [
     "WMT",
     "DASH",
@@ -118,7 +118,6 @@
     "NKE"
   ],
   "dca": [
-    "V",
     "JPM",
     "DIS",
     "MSFT",
@@ -147,7 +146,8 @@
     "MA",
     "AAPL",
     "AVGO",
-    "AAPL"
+    "AAPL",
+    "GOOGL"
   ],
   "loss": [
     "SIVB",
