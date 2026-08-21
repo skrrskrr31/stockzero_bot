@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 686,
+  "total": 687,
   "trending": [
     "INTC",
     "WMT",
@@ -150,7 +150,6 @@
     "AAPL"
   ],
   "loss": [
-    "ZM",
     "SIVB",
     "ZM",
     "LCID",
@@ -169,6 +168,7 @@
     "ZM",
     "HOOD",
     "ENRN",
-    "PTON"
+    "PTON",
+    "ZM"
   ]
 }
