@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 692,
+  "total": 693,
   "trending": [
-    "WMT",
     "DASH",
     "COST",
     "ABNB",
@@ -115,7 +114,8 @@
     "NFLX",
     "PINS",
     "MSTR",
-    "NKE"
+    "NKE",
+    "PANW"
   ],
   "dca": [
     "JPM",
