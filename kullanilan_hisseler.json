@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 690,
+  "total": 691,
   "trending": [
     "WMT",
     "DASH",
@@ -150,7 +150,6 @@
     "GOOGL"
   ],
   "loss": [
-    "SIVB",
     "ZM",
     "LCID",
     "SPCE",
@@ -169,6 +168,7 @@
     "HOOD",
     "ENRN",
     "PTON",
+    "ZM",
     "ZM"
   ]
 }
