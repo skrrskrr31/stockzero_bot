@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 696,
+  "total": 697,
   "trending": [
-    "DASH",
     "COST",
     "ABNB",
     "PLTR",
@@ -115,7 +114,8 @@
     "PINS",
     "MSTR",
     "NKE",
-    "PANW"
+    "PANW",
+    "UBER"
   ],
   "dca": [
     "DIS",
