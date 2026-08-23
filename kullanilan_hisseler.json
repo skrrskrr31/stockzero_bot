@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 697,
+  "total": 698,
   "trending": [
     "COST",
     "ABNB",
@@ -118,7 +118,6 @@
     "UBER"
   ],
   "dca": [
-    "DIS",
     "MSFT",
     "NVDA",
     "CRWD",
@@ -147,7 +146,8 @@
     "AVGO",
     "AAPL",
     "GOOGL",
-    "V"
+    "V",
+    "JPM"
   ],
   "loss": [
     "LCID",
