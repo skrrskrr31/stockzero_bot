@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 694,
+  "total": 695,
   "trending": [
     "DASH",
     "COST",
@@ -150,7 +150,6 @@
     "V"
   ],
   "loss": [
-    "ZM",
     "LCID",
     "SPCE",
     "SNAP",
@@ -169,6 +168,7 @@
     "ENRN",
     "PTON",
     "ZM",
-    "ZM"
+    "ZM",
+    "COIN"
   ]
 }
