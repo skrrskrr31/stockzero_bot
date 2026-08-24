@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 698,
+  "total": 699,
   "trending": [
     "COST",
     "ABNB",
@@ -150,7 +150,6 @@
     "JPM"
   ],
   "loss": [
-    "LCID",
     "SPCE",
     "SNAP",
     "ZM",
@@ -169,6 +168,7 @@
     "PTON",
     "ZM",
     "ZM",
-    "COIN"
+    "COIN",
+    "SIVB"
   ]
 }
