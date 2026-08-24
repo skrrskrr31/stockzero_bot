@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 701,
+  "total": 702,
   "trending": [
     "ABNB",
     "PLTR",
@@ -118,7 +118,6 @@
     "TSLA"
   ],
   "dca": [
-    "MSFT",
     "NVDA",
     "CRWD",
     "TSLA",
@@ -147,7 +146,8 @@
     "AAPL",
     "GOOGL",
     "V",
-    "JPM"
+    "JPM",
+    "DIS"
   ],
   "loss": [
     "SPCE",
