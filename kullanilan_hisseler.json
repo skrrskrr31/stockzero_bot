@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 704,
+  "total": 705,
   "trending": [
-    "ABNB",
     "PLTR",
     "MSFT",
     "SHOP",
@@ -115,7 +114,8 @@
     "NKE",
     "PANW",
     "UBER",
-    "TSLA"
+    "TSLA",
+    "TGT"
   ],
   "dca": [
     "NVDA",
