@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 708,
+  "total": 709,
   "trending": [
-    "PLTR",
     "MSFT",
     "SHOP",
     "SMCI",
@@ -115,7 +114,8 @@
     "PANW",
     "UBER",
     "TSLA",
-    "TGT"
+    "TGT",
+    "PYPL"
   ],
   "dca": [
     "CRWD",
