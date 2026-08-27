@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 710,
+  "total": 711,
   "trending": [
     "MSFT",
     "SHOP",
@@ -150,7 +150,6 @@
     "NVDA"
   ],
   "loss": [
-    "ZM",
     "AMC",
     "LEHM",
     "GME",
@@ -169,6 +168,7 @@
     "COIN",
     "SIVB",
     "LCID",
-    "ZM"
+    "ZM",
+    "SPCE"
   ]
 }
