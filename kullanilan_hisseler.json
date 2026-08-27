@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 712,
+  "total": 713,
   "trending": [
-    "MSFT",
     "SHOP",
     "SMCI",
     "QCOM",
@@ -115,7 +114,8 @@
     "UBER",
     "TSLA",
     "TGT",
-    "PYPL"
+    "PYPL",
+    "ABNB"
   ],
   "dca": [
     "TSLA",
