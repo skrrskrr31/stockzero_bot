@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 713,
+  "total": 714,
   "trending": [
     "SHOP",
     "SMCI",
@@ -118,7 +118,6 @@
     "ABNB"
   ],
   "dca": [
-    "TSLA",
     "XOM",
     "AMZN",
     "QCOM",
@@ -147,7 +146,8 @@
     "JPM",
     "DIS",
     "MSFT",
-    "NVDA"
+    "NVDA",
+    "CRWD"
   ],
   "loss": [
     "AMC",
