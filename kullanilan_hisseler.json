@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 714,
+  "total": 715,
   "trending": [
     "SHOP",
     "SMCI",
@@ -150,7 +150,6 @@
     "CRWD"
   ],
   "loss": [
-    "AMC",
     "LEHM",
     "GME",
     "ARKK",
@@ -169,6 +168,7 @@
     "SIVB",
     "LCID",
     "ZM",
-    "SPCE"
+    "SPCE",
+    "ZM"
   ]
 }
