@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 718,
+  "total": 719,
   "trending": [
     "SMCI",
     "QCOM",
@@ -150,7 +150,6 @@
     "TSLA"
   ],
   "loss": [
-    "LEHM",
     "GME",
     "ARKK",
     "ZM",
@@ -169,6 +168,7 @@
     "LCID",
     "ZM",
     "SPCE",
-    "ZM"
+    "ZM",
+    "AMC"
   ]
 }
