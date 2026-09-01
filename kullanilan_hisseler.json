@@ -84,7 +84,7 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 730,
+  "total": 731,
   "trending": [
     "SOFI",
     "GM",
@@ -150,7 +150,6 @@
     "QCOM"
   ],
   "loss": [
-    "ZM",
     "BBBY",
     "ZM",
     "ZM",
@@ -169,6 +168,7 @@
     "ZM",
     "AMC",
     "SNAP",
-    "LEHM"
+    "LEHM",
+    "ZM"
   ]
 }
