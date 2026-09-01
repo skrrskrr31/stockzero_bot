@@ -84,9 +84,8 @@
     "JEPI_XYLD",
     "VYMI_IDV"
   ],
-  "total": 732,
+  "total": 733,
   "trending": [
-    "SOFI",
     "GM",
     "COIN",
     "DDOG",
@@ -115,7 +114,8 @@
     "V",
     "SPY",
     "ABBV",
-    "RBLX"
+    "RBLX",
+    "SHOP"
   ],
   "dca": [
     "AMD",
